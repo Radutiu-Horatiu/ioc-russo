@@ -32,7 +32,7 @@ function App() {
   }, []);
   return (
     <Flex h="100vh">
-      {loggedIn && <Navbar />}
+      <Navbar />
       {/* Right content */}
       <Flex flexDir="column" w="100%">
         {/* Dynamic content screen */}

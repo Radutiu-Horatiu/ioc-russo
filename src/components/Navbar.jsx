@@ -32,11 +32,11 @@ export default function Navbar() {
 			</Flex>
 
 			{/* Down */}
-			<Flex flexDir="column">
+			{user?.email && <Flex flexDir="column">
 				<Button justifyContent="flex-start" variant="ghost" onClick={logUserOut}>
 					<Text>Log out</Text>
 				</Button>
-			</Flex>
+			</Flex>}
 		</Flex>
 	);
 }
