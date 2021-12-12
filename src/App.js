@@ -10,7 +10,7 @@ import { onAuthStateChanged } from "@firebase/auth";
 import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { userActions } from "./store/user/user-slice";
-import ScreenTemplate from "./screens/ScreenTemplate/ScreenTemplate";
+import PresentingScreen from "./screens/PresentingScreen/PresentingScreen";
 
 function App() {
   const dispatch = useDispatch();
@@ -34,12 +34,12 @@ function App() {
     <Flex h="100vh">
       <Navbar />
       {/* Right content */}
-      <Flex flexDir="column" w="100%">
+      <Flex flexDir="column" w="100%" p={"1vh"}>
         {/* Dynamic content screen */}
-        <Flex h="100%" justify="center" align="center">
+        <Flex h="100%">
           <Switch>
-            <Route path="/template">
-              <ScreenTemplate />
+            <Route path="/prezentare">
+              <PresentingScreen />
             </Route>
             <Route path="/register">
               <RegisterScreen />
