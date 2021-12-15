@@ -86,7 +86,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/test")}
+          onClick={() => history.push("/evenimente")}
           my="0.5vh"
         >
           <Text>Evenimente</Text>
@@ -94,7 +94,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/test")}
+          onClick={() => history.push("/linkuri-utile")}
           my="0.5vh"
         >
           <Text>Link-uri utile</Text>
