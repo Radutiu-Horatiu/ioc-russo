@@ -8,6 +8,7 @@ export default function ScreenTemplate({ title, mainText, sections }) {
       w={"100%"}
       ml={"5vh"}
       h={"98vh"}
+      p={"1vh"}
       overflowY={"scroll"}
     >
       <Heading size="3xl" mb={"1vh"}>
