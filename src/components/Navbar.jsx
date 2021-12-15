@@ -46,6 +46,14 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
+          onClick={() => history.push("/applications")}
+          my="0.5vh"
+        >
+          <Text>Aplicații</Text>
+        </Button>
+        <Button
+          variant="ghost"
+          justifyContent="flex-start"
           onClick={() => history.push("/prezentare")}
           my="0.5vh"
         >
