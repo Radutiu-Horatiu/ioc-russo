@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import TeachingStaffScreen from "./screens/TeachingStaffScreen/TeachingStaffScreen";
 import TestimonialsScreen from "./screens/TestimonialsScreen/TestimonialsScreen";
+import ApplicationsScreen from "./screens/ApplicationsScreen/ApplicationsScreen";
 import { Route, Switch, useHistory } from "react-router";
 import LoginScreen from "./screens/Login/LoginScreen";
 import RegisterScreen from "./screens/Register/RegisterScreen";
@@ -47,6 +48,8 @@ function App() {
             </Route>
             <Route path="/evenimente">
               <EventsScreen />
+            <Route path="/staff">
+              <TeachingStaffScreen />
             </Route>
             <Route path="/testimoniale">
               <TestimonialsScreen />
@@ -56,6 +59,9 @@ function App() {
             </Route>
             <Route path="/prezentare">
               <PresentingScreen />
+            </Route>
+            <Route path="/applications">
+              <ApplicationsScreen />
             </Route>
             <Route path="/register">
               <RegisterScreen />

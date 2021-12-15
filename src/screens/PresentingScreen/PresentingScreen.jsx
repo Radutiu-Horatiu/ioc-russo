@@ -7,21 +7,21 @@ import ScreenTemplate from "../../components/ScreenTemplate";
 export default function PresentingScreen() {
   return (
     <ScreenTemplate
-      title={"Titlu dinamic"}
-      mainText={"Acesta este subtext"}
+      title={"Prezentare generală"}
+      mainText={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}
       sections={[
         {
-          title: "Section1 title",
-          description: "Section1 desc",
+          title: "Misiunea programului",
+          description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ",
           component: (
             <Flex>
-              <Text>Content sesction1</Text>
+              <Text>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</Text>
             </Flex>
           ),
         },
         {
-          title: "Section2 title",
-          description: "Section2 desc",
+          title: "Title",
+          description: "Description",
           component: (
             <MyCarousel
               slides={[
@@ -29,18 +29,22 @@ export default function PresentingScreen() {
                 <Flex
                   align={"center"}
                   justify={"center"}
-                  p={"5vh"}
-                  bgColor={"purple.200"}
+                  height={"300px"}
+                  // p={"5vh"}
+                  // bgColor={"purple.200"}
                 >
-                  <Image src={LOGO} h="50vh" objectFit={"cover"} />
+                  {/* <Image src={LOGO} h="50vh" objectFit={"cover"} /> */}
+                  <Text>Ce face programul</Text>
                 </Flex>,
                 // 2
-                <Flex align={"center"} justify={"center"}>
-                  <Image src={LOGO} h="50vh" objectFit={"cover"} />
+                <Flex align={"center"} justify={"center"} height={"300px"}>
+                  {/* <Image src={LOGO} h="50vh" objectFit={"cover"} /> */}
+                  <Text>Principiile programului</Text>
                 </Flex>,
                 // 3
-                <Flex align={"center"} justify={"center"}>
-                  <Image src={LOGO} h="50vh" objectFit={"cover"} />
+                <Flex align={"center"} justify={"center"} height={"300px"}>
+                  {/* <Image src={LOGO} h="50vh" objectFit={"cover"} /> */}
+                  <Text>Taxe scolarizare</Text>
                 </Flex>,
               ]}
             />
