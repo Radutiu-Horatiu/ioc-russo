@@ -14,6 +14,8 @@ import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { userActions } from "./store/user/user-slice";
 import PresentingScreen from "./screens/PresentingScreen/PresentingScreen";
+import EventsScreen from "./screens/Evenimente/EventsScreen.jsx";
+import UsefulLinksScreen from "./screens/LinkuriUtile/UsefulLinksScreen.jsx";
 
 function App() {
   const dispatch = useDispatch();
@@ -41,6 +43,11 @@ function App() {
         {/* Dynamic content screen */}
         <Flex h="100%">
           <Switch>
+            <Route path="/linkuri-utile">
+              <UsefulLinksScreen />
+            </Route>
+            <Route path="/evenimente">
+              <EventsScreen />
             <Route path="/staff">
               <TeachingStaffScreen />
             </Route>
