@@ -13,56 +13,64 @@ import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { userActions } from "./store/user/user-slice";
 import PresentingScreen from "./screens/PresentingScreen/PresentingScreen";
+import PresentingDetailedScreen from "./screens/PresentingDetailedScreen/PresentingDetailedScreen";
+import OpportunitiesScreen from "./screens/OportunutiesScreen/OpportunitiesScreen";
 
 function App() {
-  const dispatch = useDispatch();
-  const history = useHistory();
-  const [loggedIn, setloggedIn] = useState(false);
-  const user = useSelector((state) => state.user);
+	const dispatch = useDispatch();
+	const history = useHistory();
+	const [loggedIn, setloggedIn] = useState(false);
+	const user = useSelector((state) => state.user);
 
-  React.useEffect(() => {
-    if (!user.email.length) setloggedIn(false);
-    else setloggedIn(true);
-  }, [user]);
+	React.useEffect(() => {
+		if (!user.email.length) setloggedIn(false);
+		else setloggedIn(true);
+	}, [user]);
 
-  React.useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        dispatch(userActions.setEmail({ email: user.email }));
-      }
-    });
-  }, []);
-  return (
-    <Flex h="100vh">
-      <Navbar />
-      {/* Right content */}
-      <Flex flexDir="column" w="100%" p={"1vh"}>
-        {/* Dynamic content screen */}
-        <Flex h="100%">
-          <Switch>
-            <Route path="/testimoniale">
-              <TestimonialsScreen />
-            </Route>
-            <Route path="/staff">
-              <TeachingStaffScreen />
-            </Route>
-            <Route path="/prezentare">
-              <PresentingScreen />
-            </Route>
-            <Route path="/register">
-              <RegisterScreen />
-            </Route>
-            <Route path="/login">
-              <LoginScreen />
-            </Route>
-            <Route path="/">
-              <HomeScreen />
-            </Route>
-          </Switch>
-        </Flex>
-      </Flex>
-    </Flex>
-  );
+	React.useEffect(() => {
+		onAuthStateChanged(auth, (user) => {
+			if (user) {
+				dispatch(userActions.setEmail({ email: user.email }));
+			}
+		});
+	}, []);
+	return (
+		<Flex h="100vh">
+			<Navbar />
+			{/* Right content */}
+			<Flex flexDir="column" w="100%" p={"1vh"}>
+				{/* Dynamic content screen */}
+				<Flex h="100%">
+					<Switch>
+						<Route path="/testimoniale">
+							<TestimonialsScreen />
+						</Route>
+						<Route path="/staff">
+							<TeachingStaffScreen />
+						</Route>
+						<Route path="/prezentare">
+							<PresentingScreen />
+						</Route>
+						<Route path="/prezentare-detaliata">
+							<PresentingDetailedScreen />
+						</Route>
+						<Route path="/Oportunitati">
+							<OpportunitiesScreen />
+						</Route>
+						<Route path="/register">
+							<RegisterScreen />
+						</Route>
+						<Route path="/login">
+							<LoginScreen />
+						</Route>
+						<Route path="/">
+							<HomeScreen />
+						</Route>
+					</Switch>
+				</Flex>
+			</Flex>
+		</Flex>
+	);
 }
 
 export default App;
