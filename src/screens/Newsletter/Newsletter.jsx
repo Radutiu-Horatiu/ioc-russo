@@ -1,4 +1,4 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 import React from "react";
 import ScreenTemplate from "../../components/ScreenTemplate";
 import {
@@ -11,17 +11,16 @@ import {
   Td,
   TableCaption,
 } from "@chakra-ui/react";
-import { Link } from "@chakra-ui/react";
 
 export default function UsefulLinksScreen() {
   return (
     <ScreenTemplate
-      title={"Link-uri utile"}
+      title={"Newsletter"}
       sections={[
         {
           component: (
             <Table variant="striped">
-              <TableCaption>Sectiunea de Linkuri Utile</TableCaption>
+              <TableCaption>Newsletter</TableCaption>
               <Thead>
                 <Tr>
                   <Th>Link</Th>
@@ -30,9 +29,7 @@ export default function UsefulLinksScreen() {
               <Tbody>
                 <Tr>
                   <Td>
-                    <Link href="https://www.facebook.com/woprc" isExternal>
-                      Facebook Masterat Ruso
-                    </Link>
+                    <Text>ceva</Text>
                   </Td>
                 </Tr>
               </Tbody>

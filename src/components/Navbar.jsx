@@ -54,7 +54,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/prezentare")}
+          onClick={() => history.push("/presenting")}
           my="0.5vh"
         >
           <Text>Prezentare generală</Text>
@@ -62,7 +62,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/test")}
+          onClick={() => history.push("/presentingDetailed")}
           my="0.5vh"
         >
           <Text>Descriere detaliată program</Text>
@@ -70,7 +70,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/test")}
+          onClick={() => history.push("/opportunities")}
           my="0.5vh"
         >
           <Text>Oportunități profesionale</Text>
@@ -86,7 +86,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/testimoniale")}
+          onClick={() => history.push("/testimonials")}
           my="0.5vh"
         >
           <Text>Testimoniale</Text>
@@ -94,7 +94,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/evenimente")}
+          onClick={() => history.push("/events")}
           my="0.5vh"
         >
           <Text>Evenimente</Text>
@@ -102,7 +102,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/linkuri-utile")}
+          onClick={() => history.push("/linkUtils")}
           my="0.5vh"
         >
           <Text>Link-uri utile</Text>
@@ -110,7 +110,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/test")}
+          onClick={() => history.push("/newsletter")}
           my="0.5vh"
         >
           <Text>Newsletter</Text>
