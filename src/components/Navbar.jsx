@@ -9,16 +9,16 @@ import { logout } from "../store/user/utils";
 import LOGO from "../assets/russo_logo.png";
 
 export default function Navbar() {
-  const dispatch = useDispatch();
-  const history = useHistory();
-  const user = useSelector((state) => state.user);
+	const dispatch = useDispatch();
+	const history = useHistory();
+	const user = useSelector((state) => state.user);
 
-  const logUserOut = () => {
-    logout();
-    dispatch(userActions.signOut());
-    history.push("/login");
-  };
-
+	const logUserOut = () => {
+		logout();
+		dispatch(userActions.signOut());
+		history.push("/login");
+	};
+  
   return (
     <Flex
       flexDir="column"
@@ -117,18 +117,14 @@ export default function Navbar() {
         </Button>
       </Flex>
 
-      {/* Down */}
-      {user?.email && (
-        <Flex flexDir="column">
-          <Button
-            justifyContent="flex-start"
-            variant="ghost"
-            onClick={logUserOut}
-          >
-            <Text>Log out</Text>
-          </Button>
-        </Flex>
-      )}
-    </Flex>
-  );
+			{/* Down */}
+			{user?.email && (
+				<Flex flexDir="column">
+					<Button justifyContent="flex-start" variant="ghost" onClick={logUserOut}>
+						<Text>Log out</Text>
+					</Button>
+				</Flex>
+			)}
+		</Flex>
+	);
 }

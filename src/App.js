@@ -14,27 +14,22 @@ import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
 import { userActions } from "./store/user/user-slice";
 import PresentingScreen from "./screens/PresentingScreen/PresentingScreen";
+import PresentingDetailedScreen from "./screens/PresentingDetailedScreen/PresentingDetailedScreen";
+import OpportunitiesScreen from "./screens/OportunutiesScreen/OpportunitiesScreen";
 import EventsScreen from "./screens/Evenimente/EventsScreen.jsx";
 import UsefulLinksScreen from "./screens/LinkuriUtile/UsefulLinksScreen.jsx";
 
 function App() {
-  const dispatch = useDispatch();
-  const history = useHistory();
-  const [loggedIn, setloggedIn] = useState(false);
-  const user = useSelector((state) => state.user);
+	const dispatch = useDispatch();
+	const history = useHistory();
+	const [loggedIn, setloggedIn] = useState(false);
+	const user = useSelector((state) => state.user);
 
-  React.useEffect(() => {
-    if (!user.email.length) setloggedIn(false);
-    else setloggedIn(true);
-  }, [user]);
-
-  React.useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        dispatch(userActions.setEmail({ email: user.email }));
-      }
-    });
-  }, []);
+	React.useEffect(() => {
+		if (!user.email.length) setloggedIn(false);
+		else setloggedIn(true);
+	}, [user]);
+  
   return (
     <Flex h="100vh">
       <Navbar />
@@ -60,6 +55,9 @@ function App() {
             <Route path="/prezentare">
               <PresentingScreen />
             </Route>
+            <Route path="/Oportunitati">
+							<OpportunitiesScreen />
+						</Route>
             <Route path="/applications">
               <ApplicationsScreen />
             </Route>
