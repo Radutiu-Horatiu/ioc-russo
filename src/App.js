@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import TeachingStaffScreen from "./screens/TeachingStaffScreen/TeachingStaffScreen";
 import TestimonialsScreen from "./screens/TestimonialsScreen/TestimonialsScreen";
+import ApplicationsScreen from "./screens/ApplicationsScreen/ApplicationsScreen";
 import { Route, Switch, useHistory } from "react-router";
 import LoginScreen from "./screens/Login/LoginScreen";
 import RegisterScreen from "./screens/Register/RegisterScreen";
@@ -15,6 +16,8 @@ import { userActions } from "./store/user/user-slice";
 import PresentingScreen from "./screens/PresentingScreen/PresentingScreen";
 import PresentingDetailedScreen from "./screens/PresentingDetailedScreen/PresentingDetailedScreen";
 import OpportunitiesScreen from "./screens/OportunutiesScreen/OpportunitiesScreen";
+import EventsScreen from "./screens/Evenimente/EventsScreen.jsx";
+import UsefulLinksScreen from "./screens/LinkuriUtile/UsefulLinksScreen.jsx";
 
 function App() {
 	const dispatch = useDispatch();
@@ -26,51 +29,52 @@ function App() {
 		if (!user.email.length) setloggedIn(false);
 		else setloggedIn(true);
 	}, [user]);
-
-	React.useEffect(() => {
-		onAuthStateChanged(auth, (user) => {
-			if (user) {
-				dispatch(userActions.setEmail({ email: user.email }));
-			}
-		});
-	}, []);
-	return (
-		<Flex h="100vh">
-			<Navbar />
-			{/* Right content */}
-			<Flex flexDir="column" w="100%" p={"1vh"}>
-				{/* Dynamic content screen */}
-				<Flex h="100%">
-					<Switch>
-						<Route path="/testimoniale">
-							<TestimonialsScreen />
-						</Route>
-						<Route path="/staff">
-							<TeachingStaffScreen />
-						</Route>
-						<Route path="/prezentare">
-							<PresentingScreen />
-						</Route>
-						<Route path="/prezentare-detaliata">
-							<PresentingDetailedScreen />
-						</Route>
-						<Route path="/Oportunitati">
+  
+  return (
+    <Flex h="100vh">
+      <Navbar />
+      {/* Right content */}
+      <Flex flexDir="column" w="100%" p={"1vh"}>
+        {/* Dynamic content screen */}
+        <Flex h="100%">
+          <Switch>
+            <Route path="/linkuri-utile">
+              <UsefulLinksScreen />
+            </Route>
+            <Route path="/evenimente">
+              <EventsScreen />
+            <Route path="/staff">
+              <TeachingStaffScreen />
+            </Route>
+            <Route path="/testimoniale">
+              <TestimonialsScreen />
+            </Route>
+            <Route path="/staff">
+              <TeachingStaffScreen />
+            </Route>
+            <Route path="/prezentare">
+              <PresentingScreen />
+            </Route>
+            <Route path="/Oportunitati">
 							<OpportunitiesScreen />
 						</Route>
-						<Route path="/register">
-							<RegisterScreen />
-						</Route>
-						<Route path="/login">
-							<LoginScreen />
-						</Route>
-						<Route path="/">
-							<HomeScreen />
-						</Route>
-					</Switch>
-				</Flex>
-			</Flex>
-		</Flex>
-	);
+            <Route path="/applications">
+              <ApplicationsScreen />
+            </Route>
+            <Route path="/register">
+              <RegisterScreen />
+            </Route>
+            <Route path="/login">
+              <LoginScreen />
+            </Route>
+            <Route path="/">
+              <HomeScreen />
+            </Route>
+          </Switch>
+        </Flex>
+      </Flex>
+    </Flex>
+  );
 }
 
 export default App;
