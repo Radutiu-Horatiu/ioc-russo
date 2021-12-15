@@ -9,16 +9,18 @@ import { logout } from "../store/user/utils";
 import LOGO from "../assets/russo_logo.png";
 
 export default function Navbar() {
-	const dispatch = useDispatch();
-	const history = useHistory();
-	const user = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+  const history = useHistory();
+  const user = useSelector((state) => state.user);
 
-	const logUserOut = () => {
-		logout();
-		dispatch(userActions.signOut());
-		history.push("/login");
-	};
-  
+  const logUserOut = () => {
+    logout();
+    dispatch(userActions.signOut());
+    history.push("/login");
+  };
+
+  console.log(user);
+
   return (
     <Flex
       flexDir="column"
@@ -117,14 +119,44 @@ export default function Navbar() {
         </Button>
       </Flex>
 
-			{/* Down */}
-			{user?.email && (
-				<Flex flexDir="column">
-					<Button justifyContent="flex-start" variant="ghost" onClick={logUserOut}>
-						<Text>Log out</Text>
-					</Button>
-				</Flex>
-			)}
-		</Flex>
-	);
+      {/* Down */}
+      <Flex flexDir="column">
+        {user.email ? (
+          <>
+            <Button
+              justifyContent="flex-start"
+              variant="ghost"
+              mb={"1vh"}
+              onClick={() => history.push("/login")}
+            >
+              <Text>{user.email}</Text>
+            </Button>
+            <Button
+              justifyContent="flex-start"
+              variant="ghost"
+              mb={"1vh"}
+              onClick={() => history.push("/login")}
+            >
+              <Text>Admin</Text>
+            </Button>
+            <Button
+              justifyContent="flex-start"
+              variant="ghost"
+              onClick={logUserOut}
+            >
+              <Text>Deconectare</Text>
+            </Button>
+          </>
+        ) : (
+          <Button
+            justifyContent="flex-start"
+            variant="ghost"
+            onClick={() => history.push("/login")}
+          >
+            <Text>Conectare</Text>
+          </Button>
+        )}
+      </Flex>
+    </Flex>
+  );
 }
