@@ -11,7 +11,6 @@ import Navbar from "./components/Navbar";
 import { Flex } from "@chakra-ui/layout";
 import PresentingScreen from "./screens/PresentingScreen/PresentingScreen";
 import PresentingDetailedScreen from "./screens/PresentingDetailedScreen/PresentingDetailedScreen";
-import Newsletter from "./screens/Newsletter/Newsletter";
 import OpportunitiesScreen from "./screens/OportunutiesScreen/OpportunitiesScreen";
 import EventsScreen from "./screens/Evenimente/EventsScreen.jsx";
 import UsefulLinksScreen from "./screens/LinkuriUtile/UsefulLinksScreen.jsx";
@@ -51,9 +50,6 @@ function App() {
             </Route>
             <Route path="/applications">
               <ApplicationsScreen />
-            </Route>
-            <Route path="/newsletter">
-              <Newsletter />
             </Route>
             <Route path="/register">
               <RegisterScreen />

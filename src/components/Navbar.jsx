@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { userActions } from "../store/user/user-slice";
 import { Flex, Image } from "@chakra-ui/react";
@@ -51,7 +50,7 @@ export default function Navbar() {
           onClick={() => history.push("/applications")}
           my="0.5vh"
         >
-          <Text>Aplicații</Text>
+          <Text>Admitere</Text>
         </Button>
         <Button
           variant="ghost"
@@ -83,7 +82,7 @@ export default function Navbar() {
           onClick={() => history.push("/staff")}
           my="0.5vh"
         >
-          <Text>Staff predare</Text>
+          <Text>Cadre didactice</Text>
         </Button>
         <Button
           variant="ghost"
@@ -99,7 +98,7 @@ export default function Navbar() {
           onClick={() => history.push("/events")}
           my="0.5vh"
         >
-          <Text>Evenimente</Text>
+          <Text>Noutăți & Evenimente</Text>
         </Button>
         <Button
           variant="ghost"
@@ -108,14 +107,6 @@ export default function Navbar() {
           my="0.5vh"
         >
           <Text>Link-uri utile</Text>
-        </Button>
-        <Button
-          variant="ghost"
-          justifyContent="flex-start"
-          onClick={() => history.push("/newsletter")}
-          my="0.5vh"
-        >
-          <Text>Newsletter</Text>
         </Button>
       </Flex>
 

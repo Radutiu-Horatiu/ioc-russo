@@ -1,11 +1,9 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import ScreenTemplate from "../../components/ScreenTemplate";
 import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,

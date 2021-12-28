@@ -1,4 +1,4 @@
-import { Text, Flex, Image } from "@chakra-ui/react";
+import { Flex, Image } from "@chakra-ui/react";
 import React from "react";
 import LOGO from "../../assets/russo_logo.png";
 import MyCarousel from "../../components/MyCarousel/MyCarousel";
@@ -7,7 +7,7 @@ import ScreenTemplate from "../../components/ScreenTemplate";
 export default function TeachingStaffScreen() {
 	return (
 		<ScreenTemplate
-              title={"Staff predare"}
+              title={"Cadre didactice"}
               sections={[
                 {
                   component: (

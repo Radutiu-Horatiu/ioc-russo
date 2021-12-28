@@ -1,25 +1,21 @@
 import {
   Text,
   Flex,
-  Image,
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
   Button,
 } from "@chakra-ui/react";
 import React from "react";
-import LOGO from "../../assets/russo_logo.png";
-import MyCarousel from "../../components/MyCarousel/MyCarousel";
 import ScreenTemplate from "../../components/ScreenTemplate";
 
 export default function ApplicationsScreen() {
   return (
     <ScreenTemplate
-      title={"Aplicații"}
+      title={"Admitere"}
       mainText={"Lorem ipsum dolor sit amet, consectetur adipiscing elit"}
       sections={[
         {

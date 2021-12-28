@@ -1,6 +1,5 @@
-import { Text, Flex, Image } from "@chakra-ui/react";
+import { Text, Flex } from "@chakra-ui/react";
 import React from "react";
-import LOGO from "../../assets/russo_logo.png";
 import MyCarousel from "../../components/MyCarousel/MyCarousel";
 import ScreenTemplate from "../../components/ScreenTemplate";
 
