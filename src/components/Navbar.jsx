@@ -108,7 +108,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/linkUtils")}
+          onClick={() => history.push("/usefulLinks")}
           my="0.5vh"
         >
           <Text>Link-uri utile</Text>

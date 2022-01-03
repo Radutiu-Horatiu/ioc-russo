@@ -24,7 +24,7 @@ function App() {
         {/* Dynamic content screen */}
         <Flex h="100%">
           <Switch>
-            <Route path="/linkUtils">
+            <Route path="/usefulLinks">
               <UsefulLinksScreen />
             </Route>
             <Route path="/events">
