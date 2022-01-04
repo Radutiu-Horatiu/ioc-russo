@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { userActions } from "../store/user/user-slice";
-import { Flex, Image, VStack } from "@chakra-ui/react";
+import { Flex, Image, Box } from "@chakra-ui/react";
 import { Heading, Text } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/react";
 import { useHistory } from "react-router";
@@ -24,22 +24,20 @@ export default function Navbar() {
     <Flex
       flexDir="column"
       w="25%"
-      backgroundColor="purple.200"
+      backgroundColor="gray.200"
       justify="space-between"
       p="1vh"
     >
       {/* Up */}
-      <Flex flexDir="column">
-        <Flex align="center" mb="3vh">
+      <Flex flexDir={"column"}>
+        <Flex mb="3vh" align={"center"}>
           <Image src={LOGO} w="12vh" h="12vh" />
-          <VStack>
-            <Heading fontSize="3vh">
-              RUSO
-            </Heading>
-            <Text align="center" fontSize="1.5vh">
-              Psihologia  Resurselor  Umane  şi  Sănătate Organizaţională
+          <Box ml={"1vh"}>
+            <Heading fontSize="3.5vh">RUSO</Heading>
+            <Text fontSize="1.5vh" fontWeight={"bold"}>
+              Psihologia Resurselor Umane şi Sănătate Organizaţională
             </Text>
-          </VStack>
+          </Box>
         </Flex>
         <Button
           variant="ghost"

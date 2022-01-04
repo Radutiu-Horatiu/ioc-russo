@@ -37,7 +37,7 @@ export default function PresentingScreen() {
                   justify={"center"}
                   height={"300px"}
                   // p={"5vh"}
-                  // bgColor={"purple.200"}
+                  // bgColor={"gray.200"}
                 >
                   {/* <Image src={LOGO} h="50vh" objectFit={"cover"} /> */}
                   <Text>Ce face programul</Text>

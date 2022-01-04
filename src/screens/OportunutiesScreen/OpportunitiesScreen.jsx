@@ -25,7 +25,7 @@ export default function OpportunitiesScreen() {
 						<MyCarousel
 							slides={[
 								// 1
-								<Flex align={"center"} justify={"center"} p={"5vh"} bgColor={"purple.200"}>
+								<Flex align={"center"} justify={"center"} p={"5vh"} bgColor={"gray.200"}>
 									<Image src={LOGO} h="50vh" objectFit={"cover"} />
 								</Flex>,
 								// 2

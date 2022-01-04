@@ -24,7 +24,7 @@ export default function TestimonialsScreen() {
             <MyCarousel
               slides={[
                 // 1
-                <Flex align={"center"} justify={"center"} bgColor={"purple.200"} height={"550px"}>
+                <Flex align={"center"} justify={"center"} bgColor={"gray.200"} height={"550px"}>
                   <Text ml={"40"} mr={"40"} align={"justify"}>
                     „Îmi amintesc cu drag de cursurile avute şi informațiile primite. A fost o călatorie pe parcursul căreia am învăţat ce înseamnă munca în echipă, responsabilitatea şi rigoarea. Acum, după ce am absolvit, aceşti ani de învăţare, pot spune că, au pus bazele dezvoltării mele profesionale, reprezentând un instrument important în activitatea mea atât prin competenţele formate, cât şi prin informaţiile la care am avut acces.” (Violeta Mateș, Coach & Specialist Dezvoltare Organizaţională)
                   </Text>
@@ -36,7 +36,7 @@ export default function TestimonialsScreen() {
                   </Text>
                 </Flex>,
                 // 3
-                <Flex align={"center"} justify={"center"} height={"550px"} bgColor={"purple.200"}>
+                <Flex align={"center"} justify={"center"} height={"550px"} bgColor={"gray.200"}>
                   <Text ml={"40"} mr={"40"} align={"justify"}>
                     „Utilitatea şi valoarea masterului de Psihologia Resurselor Umane şi Sănătate Organizaţională am înţeles-o mai ales când am ajuns în câmpul muncii. Ca student, masterul mi-a deschis oportunitatea de a aprofunda subiecte care m-au atras încă din timpul facultăţii, cum ar fi coaching, training, consiliere, dezvoltare organizaţională. Chiar dacă în acel moment nu aş fi ştiut să spun la ce îmi vor folosi aceste discipline pe viitor, acum pot spune că au fost esenţiale pentru a putea să-mi desfăşor activitatea de Trainer si Consultant într-o companie de Resurse Umane. Am înţeles că un bagaj teoretic bun este baza unei bune practici. Şi mai mult decât bagaj teoretic, masterul RUSO, m-a pregătit pentru ceea ce înseamnă un mediu organizaţional în zilele noastre: procese de grup, planificare si auto-organizare, interacţiuni 1 la 1, leadership, provocări în medii şi echipe diverse. Toate acestea au fost studiate dar si experimentate de către mine la masterul RUSO, mai ales datorită proiectelor de grup care uneori m-au scos din zona de confort. Fără acest Master, probabil ar fi fost mai greu să înţeleg mediul de muncă de astăzi, in dinamica şi diversitatea lui, şi as fi avut mai puţină încredere în profesionalismul muncii mele.” (Andreea Munteanu, coach Brussels, Belgia)
                   </Text>
@@ -68,7 +68,7 @@ export default function TestimonialsScreen() {
                   </VStack>
                 </Flex>,
                 // 5
-                <Flex align={"center"} justify={"center"} height={"550px"} bgColor={"purple.200"}>
+                <Flex align={"center"} justify={"center"} height={"550px"} bgColor={"gray.200"}>
                   <Text ml={"40"} mr={"40"} align={"justify"}>
                     „O colecţie nelimitată de cunoştinţe privind fenomenele din mediul organizaţional, care sintetizează, clarifică şi clasifică majoritatea situaţiilor trăite de o persoană într-o organizaţie. Fără suportul masterului RUSO, această colecţie de cunoştinţe se dobândeşte în decursul mai multor ani în diverse organizaţii, şi posibil fără susţinerea teoretică şi ştiinţifică a acestor fenomene. Experienţa celor 2 ani de master RUSO a fost inegalabilă şi incomparabilă cu anii de experienţă de lucru în companii private, fapt datorat în cea mai mare parte modului de învăţare experienţială care mi-a permis implicarea directă, reflecţia şi conceptualizarea experienţelor în situaţii noi din micro-organizaţiile din care am făcut parte, totul în mod real, nesimulat. În practică, colecţia de cunoştinţe dobândite la masterul RUSO a fost şi îmi este extrem de folositoare în două direcţii: una la nivel individual prin folosirea lor pentru optimizarea comportamentului individual faţă de orice organizaţie şi faţă de cei cu care interacţionez; alta la nivel organizaţional prin suportul teoretic şi practic pentru intervenţiile cu scopul de a îmbunătăţi anumite situaţii sau elimina anumite fenomene negative. Recomand masterul RUSO tuturor celor care îşi doresc să urmeze o carieră în domeniul resurselor umane, tuturor celor care deţin  o poziţie de conducere sau tuturor celor care au interes în studierea fenomenelor organizaţionale.” (Marius, manager)
                   </Text>
