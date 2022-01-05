@@ -14,7 +14,7 @@ export default function ScreenTemplate({ title, mainText, sections }) {
       <Heading size="3xl" mb={"1vh"}>
         {title}
       </Heading>
-      <Heading size="1xl" mb={"3vh"}>
+      <Heading size="1xl" mb={"3vh"} mt={"1vh"}>
         {mainText}
       </Heading>
 

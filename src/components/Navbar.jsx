@@ -112,45 +112,6 @@ export default function Navbar() {
           <Text>Link-uri utile</Text>
         </Button>
       </Flex>
-
-      {/* Down */}
-      <Flex flexDir="column">
-        {user.email ? (
-          <>
-            <Button
-              justifyContent="flex-start"
-              variant="ghost"
-              mb={"1vh"}
-              onClick={() => history.push("/login")}
-            >
-              <Text>{user.email}</Text>
-            </Button>
-            <Button
-              justifyContent="flex-start"
-              variant="ghost"
-              mb={"1vh"}
-              onClick={() => history.push("/login")}
-            >
-              <Text>Admin</Text>
-            </Button>
-            <Button
-              justifyContent="flex-start"
-              variant="ghost"
-              onClick={logUserOut}
-            >
-              <Text>Deconectare</Text>
-            </Button>
-          </>
-        ) : (
-          <Button
-            justifyContent="flex-start"
-            variant="ghost"
-            onClick={() => history.push("/login")}
-          >
-            <Text>Conectare</Text>
-          </Button>
-        )}
-      </Flex>
     </Flex>
   );
 }

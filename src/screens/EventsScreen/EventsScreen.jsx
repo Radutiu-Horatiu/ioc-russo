@@ -64,7 +64,7 @@ export default function EventsScreen() {
           component: (
             <Flex alignItems={"center"}>
               <Flex flexDir="row" w="100vh">
-                <Flex flexDir="column" w="60vh" marginRight="50">
+                <Flex flexDir="column" w="50vw" marginRight="50">
                   <Heading fontSize={"24"}>Noutăți</Heading>
                   <br />
                   <Table variant="striped" style={{ height: 700, width: 600 }}>
@@ -128,7 +128,7 @@ export default function EventsScreen() {
                     </Tbody>
                   </Table>
                 </Flex>
-                <Flex flexDir="column" w="60vh">
+                <Flex flexDir="column" w="50vw">
                   <Heading fontSize={"24"}>Evenimente</Heading>
                   <Calendar
                     localizer={localizer}

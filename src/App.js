@@ -11,9 +11,9 @@ import Navbar from "./components/Navbar";
 import { Flex } from "@chakra-ui/layout";
 import PresentingScreen from "./screens/PresentingScreen/PresentingScreen";
 import PresentingDetailedScreen from "./screens/PresentingDetailedScreen/PresentingDetailedScreen";
-import OpportunitiesScreen from "./screens/OportunutiesScreen/OpportunitiesScreen";
-import EventsScreen from "./screens/Evenimente/EventsScreen.jsx";
-import UsefulLinksScreen from "./screens/LinkuriUtile/UsefulLinksScreen.jsx";
+import OpportunitiesScreen from "./screens/OpportunitiesScreen/OpportunitiesScreen";
+import EventsScreen from "./screens/EventsScreen/EventsScreen.jsx";
+import UsefulLinksScreen from "./screens/UsefulLinksScreen/UsefulLinksScreen.jsx";
 
 function App() {
   return (
