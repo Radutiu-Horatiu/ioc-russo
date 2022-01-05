@@ -454,7 +454,7 @@ export default function TeachingStaffScreen() {
         },
         {
           component: (
-            <Button bgColor={"gray.200"} maxW={"300"}>
+            <Button bgColor={"purple.200"} maxW={"300"}>
               <a href={CadreDidactice} target="_blank" rel="noreferrer">Vizualizare listă cadre didactice</a>
             </Button>
           )

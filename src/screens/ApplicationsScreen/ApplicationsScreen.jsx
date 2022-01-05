@@ -38,7 +38,7 @@ export default function ApplicationsScreen() {
           title: "Calendar",
           description: "Aici puteti vedea calendarul admiterii",
           component: (
-            <Flex height={"300px"} bgColor={"gray.200"}>
+            <Flex height={"300px"} bgColor={"purple.200"}>
               <Text>Componenta de calendar</Text>
             </Flex>
           ),
@@ -48,7 +48,7 @@ export default function ApplicationsScreen() {
           description:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
           component: (
-            <Button bgColor={"gray.200"} size="lg" width="300px">
+            <Button bgColor={"purple.200"} size="lg" width="300px">
               Descarca documente
             </Button>
           ),

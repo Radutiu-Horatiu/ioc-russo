@@ -24,7 +24,7 @@ export default function Navbar() {
     <Flex
       flexDir="column"
       w="25%"
-      backgroundColor="gray.200"
+      backgroundColor="purple.200"
       justify="space-between"
       p="1vh"
     >
