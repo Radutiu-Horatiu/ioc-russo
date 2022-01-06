@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { userActions } from "../store/user/user-slice";
-import { Flex, Image } from "@chakra-ui/react";
+import { Flex, Image, Box } from "@chakra-ui/react";
 import { Heading, Text } from "@chakra-ui/layout";
 import { Button } from "@chakra-ui/react";
 import { useHistory } from "react-router";
@@ -19,6 +18,8 @@ export default function Navbar() {
     history.push("/login");
   };
 
+  console.log(user);
+
   return (
     <Flex
       flexDir="column"
@@ -28,12 +29,15 @@ export default function Navbar() {
       p="1vh"
     >
       {/* Up */}
-      <Flex flexDir="column">
-        <Flex align="center" mb="3vh">
-          <Image src={LOGO} w="10vh" h="10vh" />
-          <Heading fontSize="3vh" ml="1vh">
-            RUSO
-          </Heading>
+      <Flex flexDir={"column"}>
+        <Flex mb="3vh" align={"center"}>
+          <Image src={LOGO} w="12vh" h="12vh" />
+          <Box ml={"1vh"}>
+            <Heading fontSize="3.5vh">RUSO</Heading>
+            <Text fontSize="1.5vh" fontWeight={"bold"}>
+              Psihologia Resurselor Umane şi Sănătate Organizaţională
+            </Text>
+          </Box>
         </Flex>
         <Button
           variant="ghost"
@@ -49,12 +53,12 @@ export default function Navbar() {
           onClick={() => history.push("/applications")}
           my="0.5vh"
         >
-          <Text>Aplicații</Text>
+          <Text>Admitere</Text>
         </Button>
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/prezentare")}
+          onClick={() => history.push("/presenting")}
           my="0.5vh"
         >
           <Text>Prezentare generală</Text>
@@ -62,7 +66,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/test")}
+          onClick={() => history.push("/presentingDetailed")}
           my="0.5vh"
         >
           <Text>Descriere detaliată program</Text>
@@ -70,7 +74,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/test")}
+          onClick={() => history.push("/opportunities")}
           my="0.5vh"
         >
           <Text>Oportunități profesionale</Text>
@@ -81,12 +85,12 @@ export default function Navbar() {
           onClick={() => history.push("/staff")}
           my="0.5vh"
         >
-          <Text>Staff predare</Text>
+          <Text>Cadre didactice</Text>
         </Button>
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/testimoniale")}
+          onClick={() => history.push("/testimonials")}
           my="0.5vh"
         >
           <Text>Testimoniale</Text>
@@ -94,41 +98,20 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/test")}
+          onClick={() => history.push("/events")}
           my="0.5vh"
         >
-          <Text>Evenimente</Text>
+          <Text>Noutăți & Evenimente</Text>
         </Button>
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/test")}
+          onClick={() => history.push("/usefulLinks")}
           my="0.5vh"
         >
           <Text>Link-uri utile</Text>
         </Button>
-        <Button
-          variant="ghost"
-          justifyContent="flex-start"
-          onClick={() => history.push("/test")}
-          my="0.5vh"
-        >
-          <Text>Newsletter</Text>
-        </Button>
       </Flex>
-
-      {/* Down */}
-      {user?.email && (
-        <Flex flexDir="column">
-          <Button
-            justifyContent="flex-start"
-            variant="ghost"
-            onClick={logUserOut}
-          >
-            <Text>Log out</Text>
-          </Button>
-        </Flex>
-      )}
     </Flex>
   );
 }

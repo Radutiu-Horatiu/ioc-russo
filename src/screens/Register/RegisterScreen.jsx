@@ -3,12 +3,11 @@ import React, { useState } from "react";
 import { FormControl, FormLabel, Input, Grid, Box } from "@chakra-ui/react";
 import { Button } from "@chakra-ui/react";
 import { createUserWithEmailAndPassword } from "@firebase/auth";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { userActions } from "../../store/user/user-slice";
 import { auth } from "../../firebase";
 import { useHistory } from "react-router";
 import { Text } from "@chakra-ui/layout";
-import axios from "axios";
 
 export default function RegisterScreen() {
   const history = useHistory();
@@ -97,9 +96,9 @@ export default function RegisterScreen() {
               onClick={register}
               colorScheme="purple"
               disabled={
-                (password != passwordVerify) |
-                (password.length == 0) |
-                (passwordVerify.length == 0)
+                (password !== passwordVerify) |
+                (password.length === 0) |
+                (passwordVerify.length === 0)
               }
             >
               Register

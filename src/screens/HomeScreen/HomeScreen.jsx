@@ -1,14 +1,12 @@
-import { Flex } from "@chakra-ui/react";
-import { Text } from "@chakra-ui/layout";
 import React from "react";
-import { useSelector } from "react-redux";
+import ScreenTemplate from "../../components/ScreenTemplate";
 
 export default function HomeScreen() {
-	const email = useSelector((state) => state.user.email);
-
-	return (
-		<Flex>
-			<Text>Hello, {email}</Text>
-		</Flex>
-	);
+  return (
+    <ScreenTemplate
+      title={"Salutare"}
+      mainText={"Bine ai venit."}
+      sections={[]}
+    />
+  );
 }

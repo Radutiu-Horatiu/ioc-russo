@@ -3,23 +3,26 @@ import React from "react";
 
 export default function ScreenTemplate({ title, mainText, sections }) {
   return (
-    <Flex flexDir="column" w={"100%"} ml={"5vh"}>
+    <Flex
+      flexDir="column"
+      w={"100%"}
+      ml={"5vh"}
+      h={"98vh"}
+      p={"1vh"}
+      overflowY={"scroll"}
+    >
       <Heading size="3xl" mb={"1vh"}>
         {title}
       </Heading>
-      <Heading size="1xl" mb={"3vh"}>
+      <Heading size="1xl" mb={"3vh"} mt={"1vh"}>
         {mainText}
       </Heading>
 
       {/* Section content */}
       {sections.map((obj, i) => (
         <Flex flexDir="column" key={i} mb={"5vh"}>
-          <Text fontWeight={"bold"}>
-            {obj.title}
-          </Text>
-          <Text mb={"1vh"}>
-            {obj.description}
-          </Text>
+          <Text fontWeight={"bold"}>{obj.title}</Text>
+          <Text mb={"1vh"}>{obj.description}</Text>
           {obj.component}
         </Flex>
       ))}
