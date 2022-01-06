@@ -66,15 +66,15 @@ export default function ApplicationsScreen() {
               </Thead>
               <Tbody>
                 <Tr>
-                  <Td>inches</Td>
+                  <Td>Elon Musk</Td>
                   <Td isNumeric>10</Td>
                 </Tr>
                 <Tr>
-                  <Td>feet</Td>
+                  <Td>Jeff Bezos</Td>
                   <Td isNumeric>9</Td>
                 </Tr>
                 <Tr>
-                  <Td>yards</Td>
+                  <Td>Bill Gates</Td>
                   <Td isNumeric>8</Td>
                 </Tr>
               </Tbody>
