@@ -63,7 +63,7 @@ export default function HomeScreen() {
 
   return (
     <ScreenTemplate
-      title={"Salutare și bine ai venit"}
+      // title={"Salutare și bine ai venit"}
       sections={[
         {
           component: (
@@ -77,13 +77,16 @@ export default function HomeScreen() {
                   </Text>
                 </Box>
               </Flex>
-              <Input placeholder="Căutare pe site.." mt={"1vh"} />
+              <Heading fontSize="4.5vh" my={"2vh"}>
+                Salutare și bine ai venit
+              </Heading>
+              <Input placeholder="Căutare pe site.." my={"1vh"} />
 
               <Heading mt={"1vh"}>Noutăți și anunțuri</Heading>
               {news.map((obj, i) => (
                 <Flex flexDir={"column"} my={"1vh"} key={i}>
                   <Text fontSize={"2vh"}>{obj.title}</Text>
-                  <Text fontSize={"1vh"}>{obj.date}</Text>
+                  <Text fontSize={"1.5vh"}>{obj.date}</Text>
                   <Text>{obj.text}</Text>
                 </Flex>
               ))}

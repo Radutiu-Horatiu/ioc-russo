@@ -29,19 +29,16 @@ import CatrinelStefan from "../../assets/CatrinelStefan.png";
 import diana_taut from "../../assets/diana_taut.png";
 import no_photo_female from "../../assets/no_photo_female.png";
 import CatalinaOtoiu from "../../assets/Catalina Otoiu.png";
-import CadreDidactice from "../../assets/Cadre didactice.pdf";
 import MyCarousel from "../../components/MyCarousel/MyCarousel";
 import ScreenTemplate from "../../components/ScreenTemplate";
 
 export default function TeachingStaffScreen() {
   const teachers = [
     {
-      title: `Director departament Prof. univ. dr. Oana Benga`,
-      picture: oanabenga,
-      description: `Domenii de cercetare: Psihologia dezvoltării tipice și atipice, Sănătate mintală timpurie`,
-      mail: `oanabenga@psychology.ro`,
-      cvro: `https://docs.google.com/document/d/1zY4-EW83hWfV_emHcXNGyM9nzJ3ECIOJ84LUInLp-Gw/edit`,
-      cven: `https://docs.google.com/document/d/1DECjO_2RhayVT70doFdp7GaLx05HvOctrURAyWM4Tzo/edit`
+      title: `Prof. Univ. Dr. Petru L. Curșeu`,
+      picture: no_photo_male,
+      mail: `petrucurseu@psychology.ro`,
+      cven: `https://www.tilburguniversity.edu/webwijs/show/?uid=p.l.curseu`
     },
     {
       title: `Prof. univ. dr. Adriana Băban`,
@@ -52,17 +49,19 @@ export default function TeachingStaffScreen() {
       cven: `https://drive.google.com/file/d/12FFIaj0iJ_i4SPgy2v_lVMHOUireQiGH/view`
     },
     {
+      title: `Director departament Prof. univ. dr. Oana Benga`,
+      picture: oanabenga,
+      description: `Domenii de cercetare: Psihologia dezvoltării tipice și atipice, Sănătate mintală timpurie`,
+      mail: `oanabenga@psychology.ro`,
+      cvro: `https://docs.google.com/document/d/1zY4-EW83hWfV_emHcXNGyM9nzJ3ECIOJ84LUInLp-Gw/edit`,
+      cven: `https://docs.google.com/document/d/1DECjO_2RhayVT70doFdp7GaLx05HvOctrURAyWM4Tzo/edit`
+    },
+    {
       title: `Prof. univ. dr. Sofia Chirică`,
       picture: SofiaChirica,
       mail: `sofiachirica@psychology.ro`,
       cvro: `https://docs.google.com/document/d/1IHMtajNC5TsMoyayM2n7-BWT6Txft78XqW6AjZw_KmA/edit`,
       cven: `https://docs.google.com/document/d/1TK9XEGoI3wprl0w0y00K5qbQ8-xtcQEf5Zc2bB1VwVY/edit`
-    },
-    {
-      title: `Prof. Univ. Dr. Petru L. Curșeu`,
-      picture: no_photo_male,
-      mail: `petrucurseu@psychology.ro`,
-      cven: `https://www.tilburguniversity.edu/webwijs/show/?uid=p.l.curseu`
     },
     {
       title: `Prof. univ. dr. Mircea Miclea`,
@@ -292,15 +291,6 @@ export default function TeachingStaffScreen() {
                 </Flex>
               ))}
             />
-          ),
-        },
-        {
-          component: (
-            <Button bgColor={"purple.200"} maxW={"300"}>
-              <a href={CadreDidactice} target="_blank" rel="noreferrer">
-                Vizualizare listă cadre didactice
-              </a>
-            </Button>
           ),
         },
       ]}

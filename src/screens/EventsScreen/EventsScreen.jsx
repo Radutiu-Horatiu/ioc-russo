@@ -71,55 +71,45 @@ export default function EventsScreen() {
                     <TableCaption>Secțiunea de Noutăți</TableCaption>
                     <Thead>
                       <Tr>
-                        <Th>De interes pentru</Th>
                         <Th>Anunț</Th>
                       </Tr>
                     </Thead>
                     <Tbody>
                       <Tr>
-                        <Td>Student</Td>
                         <Td>A apărut structura anului universitar</Td>
                       </Tr>
                       <Tr>
-                        <Td>Student</Td>
                         <Td>
                           A apărut lista cu studenții care au primit bursă
                         </Td>
                       </Tr>
                       <Tr>
-                        <Td>Student</Td>
                         <Td>
                           A apărut organigrama anului universitar 2021/2022
                         </Td>
                       </Tr>
                       <Tr>
-                        <Td>Student</Td>
                         <Td>Ofertă de job</Td>
                       </Tr>
                       <Tr>
-                        <Td>Cadru didactic</Td>
                         <Td>
                           A apărut modalitatea de evaluare a studenților de la
                           master anul 1
                         </Td>
                       </Tr>
                       <Tr>
-                        <Td>Cadru didactic</Td>
                         <Td>
                           A apărut modalitatea de evaluare a studenților de la
                           master anul 2
                         </Td>
                       </Tr>
                       <Tr>
-                        <Td>Student</Td>
                         <Td>Internship</Td>
                       </Tr>
                       <Tr>
-                        <Td>Student</Td>
                         <Td>Internship în străinătate</Td>
                       </Tr>
                       <Tr>
-                        <Td>Cadru didactic</Td>
                         <Td>
                           Au apărut listele cu studenții pentru fiecare
                           specializare
@@ -141,7 +131,7 @@ export default function EventsScreen() {
                       start,
                       end,
                       isSelected,
-                      style: { backgroundColor: "purple" },
+                      style: { backgroundColor: "#D6BCFA" },
                     })}
                   />
                 </Flex>

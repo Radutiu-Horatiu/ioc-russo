@@ -1,4 +1,17 @@
-import { Text, Flex, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, useDisclosure,} from "@chakra-ui/react";
+import {
+  Text,
+  Flex,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  Box,
+} from "@chakra-ui/react";
 import React from "react";
 import MyCarousel from "../../components/MyCarousel/MyCarousel";
 import ScreenTemplate from "../../components/ScreenTemplate";
@@ -26,7 +39,7 @@ export default function TestimonialsScreen() {
     {
       fullText: `„O colecţie nelimitată de cunoştinţe privind fenomenele din mediul organizaţional, care sintetizează, clarifică şi clasifică majoritatea situaţiilor trăite de o persoană într-o organizaţie. Fără suportul masterului RUSO, această colecţie de cunoştinţe se dobândeşte în decursul mai multor ani în diverse organizaţii, şi posibil fără susţinerea teoretică şi ştiinţifică a acestor fenomene. Experienţa celor 2 ani de master RUSO a fost inegalabilă şi incomparabilă cu anii de experienţă de lucru în companii private, fapt datorat în cea mai mare parte modului de învăţare experienţială care mi-a permis implicarea directă, reflecţia şi conceptualizarea experienţelor în situaţii noi din micro-organizaţiile din care am făcut parte, totul în mod real, nesimulat. În practică, colecţia de cunoştinţe dobândite la masterul RUSO a fost şi îmi este extrem de folositoare în două direcţii: una la nivel individual prin folosirea lor pentru optimizarea comportamentului individual faţă de orice organizaţie şi faţă de cei cu care interacţionez; alta la nivel organizaţional prin suportul teoretic şi practic pentru intervenţiile cu scopul de a îmbunătăţi anumite situaţii sau elimina anumite fenomene negative. Recomand masterul RUSO tuturor celor care îşi doresc să urmeze o carieră în domeniul resurselor umane, tuturor celor care deţin  o poziţie de conducere sau tuturor celor care au interes în studierea fenomenelor organizaţionale.”`,
       subTitle: `(Marius, manager)`,
-    }
+    },
   ];
   const { isOpen, onOpen, onClose } = useDisclosure();
 
@@ -36,65 +49,71 @@ export default function TestimonialsScreen() {
       sections={[
         {
           component: (
-            <MyCarousel
-              slides={testimonials.map((obj) => (
-                <Flex
-                  align={"center"}
-                  flexDir={"column"}
-                  justify={"center"}
-                  bgColor={"purple.200"}
-                  height={"550px"}
-                >
-                  {/* Main text */}
-                  <Text
-                    ml={"40"}
-                    mr={"40"}
-                    align={"justify"}
-                    noOfLines={18}
-                    mb={"1vh"}
+            <Box mt={"7vh"}>
+              <MyCarousel
+                slides={testimonials.map((obj) => (
+                  <Flex
+                    align={"center"}
+                    flexDir={"column"}
+                    justify={"center"}
+                    bgColor={"purple.200"}
+                    height={"550px"}
                   >
-                    {obj.displayText ? obj.displayText : obj.fullText}
-                  </Text>
+                    {/* Main text */}
+                    <Text
+                      ml={"40"}
+                      mr={"40"}
+                      align={"justify"}
+                      noOfLines={18}
+                      mb={"1vh"}
+                    >
+                      {obj.displayText ? obj.displayText : obj.fullText}
+                    </Text>
 
-                  {/* Read more option */}
-                  {obj.displayText && (
-                    <Button onClick={onOpen} mt={"1vh"} mb={"2vh"}>
-                      Citește mai mult...
-                    </Button>
-                  )}
+                    {/* Read more option */}
+                    {obj.displayText && (
+                      <Button onClick={onOpen} mt={"1vh"} mb={"2vh"}>
+                        Citește mai mult...
+                      </Button>
+                    )}
 
-                  {/* Subtitle */}
-                  <Text
-                    ml={"40"}
-                    mr={"40"}
-                    align={"justify"}
-                    fontWeight={"bold"}
-                  >
-                    {obj.subTitle}
-                  </Text>
+                    {/* Subtitle */}
+                    <Text
+                      fontWeight={"bold"}
+                      pos={"absolute"}
+                      bottom={"7vh"}
+                      right={"10vh"}
+                    >
+                      {obj.subTitle}
+                    </Text>
 
-                  {/* Modal */}
-                  {obj.displayText && (
-                    <Modal isOpen={isOpen} onClose={onClose}>
-                      <ModalOverlay />
-                      <ModalContent maxW={"78rem"}>
-                        <ModalHeader>{obj.author}</ModalHeader>
-                        <ModalCloseButton />
-                        <ModalBody>
-                          <Text align={"justify"}>{obj.fullText}</Text>
-                        </ModalBody>
+                    {/* Modal */}
+                    {obj.displayText && (
+                      <Modal isOpen={isOpen} onClose={onClose}>
+                        <ModalOverlay />
+                        <ModalContent maxW={"78rem"}>
+                          <ModalHeader>{obj.author}</ModalHeader>
+                          <ModalCloseButton />
+                          <ModalBody>
+                            <Text align={"justify"}>{obj.fullText}</Text>
+                          </ModalBody>
 
-                        <ModalFooter>
-                          <Button colorScheme="purple" mr={3} onClick={onClose}>
-                            Închide
-                          </Button>
-                        </ModalFooter>
-                      </ModalContent>
-                    </Modal>
-                  )}
-                </Flex>
-              ))}
-            />
+                          <ModalFooter>
+                            <Button
+                              colorScheme="purple"
+                              mr={3}
+                              onClick={onClose}
+                            >
+                              Închide
+                            </Button>
+                          </ModalFooter>
+                        </ModalContent>
+                      </Modal>
+                    )}
+                  </Flex>
+                ))}
+              />
+            </Box>
           ),
         },
       ]}

@@ -11,12 +11,16 @@ export default function ScreenTemplate({ title, mainText, sections }) {
       p={"1vh"}
       overflowY={"scroll"}
     >
-      <Heading size="3xl" mb={"1vh"}>
-        {title}
-      </Heading>
-      <Heading size="1xl" mb={"3vh"} mt={"1vh"}>
-        {mainText}
-      </Heading>
+      {title && (
+        <Heading size="3xl" mb={"1vh"}>
+          {title}
+        </Heading>
+      )}
+      {mainText && (
+        <Heading size="1xl" mb={"3vh"} mt={"1vh"}>
+          {mainText}
+        </Heading>
+      )}
 
       {/* Section content */}
       {sections.map((obj, i) => (
