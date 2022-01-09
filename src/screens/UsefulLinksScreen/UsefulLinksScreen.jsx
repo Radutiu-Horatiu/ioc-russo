@@ -11,6 +11,45 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "@chakra-ui/react";
 
+const links = [
+  {
+    link: "http://psychology.psiedu.ubbcluj.ro/ro/",
+    description: "Departamentul de Psihologie, UBB"
+  },
+  {
+    link: "https://psiedu.ubbcluj.ro/index.php",
+    description: "Facultatea de psihologie şi Ştiinţe ale educaţiei, Universitatea Babeş-Bolyai"
+  },
+  {
+    link: "https://www.ubbcluj.ro/ro/",
+    description: "Universitatea Babeş-Bolyai"
+  },
+  {
+    link: "http://www.eawop.org/",
+    description: "European Association of Work and Organizational Psychology"
+  },
+  {
+    link: "https://www.siop.org/",
+    description: "Society for Industrial and Organizational Psychology"
+  },
+  {
+    link: "https://iaapsy.org/divisions/division1/",
+    description: "International Association of Applied Psychology - Division 1: Work & Organizational Psychology"
+  },
+  {
+    link: "http://aom.org/",
+    description: "Academy of Management"
+  },
+  {
+    link: "http://www.apio.ro/",
+    description: "Asociaţia de Psihologie Industrială şi Organizaţională"
+  },
+  {
+    link: "https://www.facebook.com/woprc",
+    description: "Facebook Masterat Psihologia Resurselor Umane şi Sănătate Organizaţională"
+  },
+];
+
 export default function UsefulLinksScreen() {
   return (
     <ScreenTemplate
@@ -26,69 +65,15 @@ export default function UsefulLinksScreen() {
                 </Tr>
               </Thead>
               <Tbody>
-                <Tr>
-                  <Td>
-                    <Link href="http://psychology.psiedu.ubbcluj.ro/ro/" isExternal>
-                      Departamentul de Psihologie, UBB
-                    </Link>
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>
-                    <Link href="https://psiedu.ubbcluj.ro/index.php" isExternal>
-                      Facultatea de psihologie şi Ştiinţe ale educaţiei, Universitatea Babeş-Bolyai
-                    </Link>
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>
-                    <Link href="https://www.ubbcluj.ro/ro/" isExternal>
-                      Universitatea Babeş-Bolyai
-                    </Link>
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>
-                    <Link href="http://www.eawop.org/" isExternal>
-                      European Association of Work and Organizational Psychology
-                    </Link>
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>
-                    <Link href="https://www.siop.org/" isExternal>
-                      Society for Industrial and Organizational Psychology
-                    </Link>
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>
-                    <Link href="https://iaapsy.org/divisions/division1/" isExternal>
-                      International Association of Applied Psychology - Division 1: Work &amp; Organizational Psychology
-                    </Link>
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>
-                    <Link href="http://aom.org/" isExternal>
-                      Academy of Management
-                    </Link>
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>
-                    <Link href="http://www.apio.ro/" isExternal>
-                      Asociaţia de Psihologie Industrială şi Organizaţională
-                    </Link>
-                  </Td>
-                </Tr>
-                <Tr>
-                  <Td>
-                    <Link href="https://www.facebook.com/woprc" isExternal>
-                      Facebook Masterat Psihologia Resurselor Umane şi Sănătate Organizaţională
-                    </Link>
-                  </Td>
-                </Tr>
+                {links.map((obj) => (
+                  <Tr>
+                    <Td>
+                      <Link href={obj.link} isExternal>
+                        {obj.description}
+                      </Link>
+                    </Td>
+                  </Tr>
+                ))}
               </Tbody>
             </Table>
           ),
