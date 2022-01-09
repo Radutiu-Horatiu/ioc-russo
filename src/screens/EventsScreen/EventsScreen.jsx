@@ -108,7 +108,7 @@ export default function EventsScreen() {
                       start,
                       end,
                       isSelected,
-                      style: { backgroundColor: "#D6BCFA" },
+                      style: { backgroundColor: "#D6BCFA" , color: "black" },
                     })}
                   />
                 </Flex>
