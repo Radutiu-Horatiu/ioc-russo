@@ -54,6 +54,18 @@ const events = [
   },
 ];
 
+const news = [
+  { description: "A apărut structura anului universitar" },
+  { description: "A apărut lista cu studenții care au primit bursă" },
+  { description: "A apărut organigrama anului universitar 2021/2022" },
+  { description: "Ofertă de job" },
+  { description: "A apărut modalitatea de evaluare a studenților de la master anul 1" },
+  { description: "A apărut modalitatea de evaluare a studenților de la master anul 2" },
+  { description: "Internship" },
+  { description: "Internship în străinătate" },
+  { description: "Au apărut listele cu studenții pentru fiecare specializare" },
+];
+
 export default function EventsScreen() {
   return (
     <ScreenTemplate
@@ -75,46 +87,11 @@ export default function EventsScreen() {
                       </Tr>
                     </Thead>
                     <Tbody>
-                      <Tr>
-                        <Td>A apărut structura anului universitar</Td>
-                      </Tr>
-                      <Tr>
-                        <Td>
-                          A apărut lista cu studenții care au primit bursă
-                        </Td>
-                      </Tr>
-                      <Tr>
-                        <Td>
-                          A apărut organigrama anului universitar 2021/2022
-                        </Td>
-                      </Tr>
-                      <Tr>
-                        <Td>Ofertă de job</Td>
-                      </Tr>
-                      <Tr>
-                        <Td>
-                          A apărut modalitatea de evaluare a studenților de la
-                          master anul 1
-                        </Td>
-                      </Tr>
-                      <Tr>
-                        <Td>
-                          A apărut modalitatea de evaluare a studenților de la
-                          master anul 2
-                        </Td>
-                      </Tr>
-                      <Tr>
-                        <Td>Internship</Td>
-                      </Tr>
-                      <Tr>
-                        <Td>Internship în străinătate</Td>
-                      </Tr>
-                      <Tr>
-                        <Td>
-                          Au apărut listele cu studenții pentru fiecare
-                          specializare
-                        </Td>
-                      </Tr>
+                      {news.map((obj) => (
+                        <Tr>
+                          <Td>{obj.description}</Td>
+                        </Tr>
+                      ))}
                     </Tbody>
                   </Table>
                 </Flex>
@@ -131,7 +108,7 @@ export default function EventsScreen() {
                       start,
                       end,
                       isSelected,
-                      style: { backgroundColor: "#D6BCFA" },
+                      style: { backgroundColor: "#D6BCFA" , color: "black" },
                     })}
                   />
                 </Flex>
