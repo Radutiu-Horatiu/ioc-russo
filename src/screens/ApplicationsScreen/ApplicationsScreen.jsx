@@ -27,9 +27,8 @@ import "react-big-calendar/lib/css/react-big-calendar.css";
 import React from "react";
 import ScreenTemplate from "../../components/ScreenTemplate";
 import { Link } from "react-router-dom";
-import { CheckIcon } from '@chakra-ui/icons'
+import { CheckIcon } from "@chakra-ui/icons";
 import { MdCheckCircle } from "react-icons/md";
-
 
 const locales = {
   ro: require("date-fns/locale/ro"),
@@ -68,7 +67,7 @@ const events = [
 ];
 
 function Slider() {
-  const { isOpen, onToggle } = useDisclosure()
+  const { isOpen, onToggle } = useDisclosure();
   const information = [
     {
       text: "Date de contact pe perioada admiterii 2021:",
@@ -123,28 +122,26 @@ function Slider() {
   return (
     <>
       <Button onClick={onToggle}>Click pentru mai multe informatii</Button>
-      <Slide direction='bottom' in={isOpen} style={{ zIndex: 10 }}>
+      <Slide direction="bottom" in={isOpen} style={{ zIndex: 10 }}>
         <Box
-          p='40px'
-          color='dark-grey'
-          mt='4'
-          bg='#D6BCFA'
-          rounded='md'
-          shadow='md'
+          p="40px"
+          color="dark-grey"
+          mt="4"
+          bg="#D6BCFA"
+          rounded="md"
+          shadow="md"
         >
-            <Flex direction="column">
-              {information.map((obj) => (              
-                <Text>
-                  {obj.text}
-                </Text>
-              ))}
-            </Flex>
+          <Flex direction="column">
+            {information.map((obj) => (
+              <Text>{obj.text}</Text>
+            ))}
+          </Flex>
         </Box>
       </Slide>
       <br></br>
       <Divider></Divider>
     </>
-  )
+  );
 }
 
 export default function ApplicationsScreen() {
@@ -177,15 +174,14 @@ export default function ApplicationsScreen() {
   return (
     <ScreenTemplate
       title={"Admitere"}
-      mainText={"Aici puteti gasi informatii despre admitere, precum taxe de scolarizare, taxe de admitere, calendarul admiterii"}
+      mainText={
+        "Aici puteti gasi informatii despre admitere, precum taxe de scolarizare, taxe de admitere, calendarul admiterii"
+      }
       sections={[
         {
           title: "Informații admitere",
-          description:
-            "",
-          component: (
-            <Slider></Slider>
-          ),
+          description: "",
+          component: <Slider></Slider>,
         },
         {
           title: "Documente necesare",
@@ -193,7 +189,7 @@ export default function ApplicationsScreen() {
             "Actele necesare la înscriere (vor fi scanate și încărcate în format PDF) :",
           component: (
             <List spacing={3}>
-              {necessaryDocuments.map((obj) => (              
+              {necessaryDocuments.map((obj) => (
                 <ListItem>
                   <ListIcon as={MdCheckCircle} color="green.500" />
                   {obj.text}
@@ -201,8 +197,17 @@ export default function ApplicationsScreen() {
               ))}
               <ListItem>
                 <Text>
-                <ListIcon as={MdCheckCircle} color="green.500" />
-                Certificat de competență lingvistică nivel minim B1, în termen de valabilitate, sau certificate sau atestate lingvistice acceptate conform <a href='https://psiedu.ubbcluj.ro/51-competenta-lingvistica' style={{color: "purple"}}>listei </a>.
+                  <ListIcon as={MdCheckCircle} color="green.500" />
+                  Certificat de competență lingvistică nivel minim B1, în termen
+                  de valabilitate, sau certificate sau atestate lingvistice
+                  acceptate conform{" "}
+                  <a
+                    href="https://psiedu.ubbcluj.ro/51-competenta-lingvistica"
+                    style={{ color: "purple" }}
+                  >
+                    listei{" "}
+                  </a>
+                  .
                 </Text>
               </ListItem>
               <br></br>
@@ -227,7 +232,7 @@ export default function ApplicationsScreen() {
                   start,
                   end,
                   isSelected,
-                  style: { backgroundColor: "#D6BCFA" },
+                  style: { backgroundColor: "#D6BCFA", color: "black" },
                 })}
               />
               <br></br>
@@ -237,18 +242,37 @@ export default function ApplicationsScreen() {
         },
         {
           title: "Taxe admitere",
-          description:
-            "Taxa de admitere este compusă din: ",
+          description: "Taxa de admitere este compusă din: ",
           component: (
             <Flex>
               <Text paddingRight="10px">
-                Taxa de înscriere (200 lei) se achită pentru fiecare specializare. Angajaţii şi copiii angajaţilor UBB, ai Bibliotecii Centrale Universitare, Grădinii Botanice, restaurantelor şi  cafeteriilor Universităţii, precum şi copiii personalului didactic şi didactic auxiliar în activitate sau pensionari din instituţiile de învăţământ universitar şi preuniversitar sunt scutiţi de  plata taxei de înscriere numai pentru o singură specializare. La înscriere candidatul este obligat să declare dacă s-a mai înscris la o altă facultate/specializare din Universitatea "Babeş–Bolyai" sau la o altă instituţie de învăţământ superior.  
+                Taxa de înscriere (200 lei) se achită pentru fiecare
+                specializare. Angajaţii şi copiii angajaţilor UBB, ai
+                Bibliotecii Centrale Universitare, Grădinii Botanice,
+                restaurantelor şi cafeteriilor Universităţii, precum şi copiii
+                personalului didactic şi didactic auxiliar în activitate sau
+                pensionari din instituţiile de învăţământ universitar şi
+                preuniversitar sunt scutiţi de plata taxei de înscriere numai
+                pentru o singură specializare. La înscriere candidatul este
+                obligat să declare dacă s-a mai înscris la o altă
+                facultate/specializare din Universitatea "Babeş–Bolyai" sau la o
+                altă instituţie de învăţământ superior.
               </Text>
-              <Center height='200px'>
-                <Divider orientation='vertical' />
+              <Center height="200px">
+                <Divider orientation="vertical" />
               </Center>
               <Text paddingLeft="10px">
-                Taxa de procesare  (în cuantum de 50 lei), se percepe pentru aspectele organizatorice si de comunicare, inclusiv pentru eventuala preînscriere, nu este supusă scutirilor, degrevărilor şi nu este returnabilă. Fac excepţie candidaţii care sunt orfani de ambii părinţi, provin  din centrele de plasament , care sunt scutiţi de la plata taxei de admitere (formată din taxa de înscriere şi taxa de procesare. Taxa de admitere se achită on line pentru fiecare specializare la care se înscrie candidatul (Psihologie, Psihopedagogie specială, etc), dar nu se achită decat o singură dată dacă în cadrul aceleiași specializări se optează și pentru „cu frecvență” și pentru „la distanță”. 
+                Taxa de procesare (în cuantum de 50 lei), se percepe pentru
+                aspectele organizatorice si de comunicare, inclusiv pentru
+                eventuala preînscriere, nu este supusă scutirilor, degrevărilor
+                şi nu este returnabilă. Fac excepţie candidaţii care sunt orfani
+                de ambii părinţi, provin din centrele de plasament , care sunt
+                scutiţi de la plata taxei de admitere (formată din taxa de
+                înscriere şi taxa de procesare. Taxa de admitere se achită on
+                line pentru fiecare specializare la care se înscrie candidatul
+                (Psihologie, Psihopedagogie specială, etc), dar nu se achită
+                decat o singură dată dacă în cadrul aceleiași specializări se
+                optează și pentru „cu frecvență” și pentru „la distanță”.
               </Text>
             </Flex>
           ),

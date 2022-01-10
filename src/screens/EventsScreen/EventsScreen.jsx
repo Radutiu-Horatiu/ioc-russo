@@ -59,8 +59,14 @@ const news = [
   { description: "A apărut lista cu studenții care au primit bursă" },
   { description: "A apărut organigrama anului universitar 2021/2022" },
   { description: "Ofertă de job" },
-  { description: "A apărut modalitatea de evaluare a studenților de la master anul 1" },
-  { description: "A apărut modalitatea de evaluare a studenților de la master anul 2" },
+  {
+    description:
+      "A apărut modalitatea de evaluare a studenților de la master anul 1",
+  },
+  {
+    description:
+      "A apărut modalitatea de evaluare a studenților de la master anul 2",
+  },
   { description: "Internship" },
   { description: "Internship în străinătate" },
   { description: "Au apărut listele cu studenții pentru fiecare specializare" },
@@ -108,7 +114,7 @@ export default function EventsScreen() {
                       start,
                       end,
                       isSelected,
-                      style: { backgroundColor: "#D6BCFA" , color: "black" },
+                      style: { backgroundColor: "#D6BCFA", color: "black" },
                     })}
                   />
                 </Flex>
