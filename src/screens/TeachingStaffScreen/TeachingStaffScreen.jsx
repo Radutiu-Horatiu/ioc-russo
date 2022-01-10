@@ -10,9 +10,10 @@ import DanaOpre130x160 from "../../assets/DanaOpre130x160.jpg";
 import SebastianPintea from "../../assets/SebastianPintea.png";
 import ClaudiaRus from "../../assets/ClaudiaRus.png";
 import diana_taut from "../../assets/diana_taut.png";
-import no_photo_female from "../../assets/no_photo_female.png";
 import CatalinaOtoiu from "../../assets/Catalina Otoiu.png";
 import lucia_ratiu from "../../assets/lucia_ratiu.png";
+import DanielaDumulescu from "../../assets/DanielaDumulescu.png"
+import Mara from "../../assets/Mara-cu-tricou-alb-2_crop-500x500-c-center.jpg";
 import MyCarousel from "../../components/MyCarousel/MyCarousel";
 import ScreenTemplate from "../../components/ScreenTemplate";
 import CadreDidactice from "../../assets/Cadre didactice.pdf";
@@ -23,7 +24,7 @@ export default function TeachingStaffScreen() {
       title: `Prof. Univ. Dr. Petru L. Curșeu (Coordonator Program de master)`,
       picture: no_photo_male,
       mail: `petrucurseu@psychology.ro`,
-      cven: `https://www.tilburguniversity.edu/webwijs/show/?uid=p.l.curseu`
+      cven: `https://research.ou.nl/en/persons/petru-curseu-2`
     },
     {
       title: `Prof. Univ. Dr. Adriana Băban`,
@@ -110,11 +111,13 @@ export default function TeachingStaffScreen() {
     },
     {
       title: `Dr. Mara Bria`,
-      picture: no_photo_female
+      picture: Mara,
+      mail: 'marabria@psychology.ro'
     },
     {
       title: `Dr. Daniela Dumulescu`,
-      picture: no_photo_female
+      picture: DanielaDumulescu,
+      mail: 'danieladumulescu@psychology.ro'
     }
   ];
 
