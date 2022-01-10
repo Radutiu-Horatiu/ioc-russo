@@ -20,6 +20,7 @@ import getDay from "date-fns/getDay";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../firebase";
+import { myNewsAndEvents } from "../../data/evenimenteNoutatiSiEvenimente";
 
 const locales = {
   ro: require("date-fns/locale/ro"),
@@ -33,29 +34,7 @@ const localizer = dateFnsLocalizer({
   locales,
 });
 
-const events = [
-  {
-    title: "Modular",
-    allDay: true,
-    start: new Date(2022, 0, 3),
-    end: new Date(2022, 0, 8),
-  },
-  {
-    title: "Meeting RUSO",
-    start: new Date(2022, 0, 7),
-    end: new Date(2022, 0, 7),
-  },
-  {
-    title: "Prezentare finala RUSO",
-    start: new Date(2022, 0, 12),
-    end: new Date(2022, 0, 12),
-  },
-  {
-    title: "Eveniment master RUSO",
-    start: new Date(2022, 1, 28),
-    end: new Date(2022, 1, 28),
-  },
-];
+const events = myNewsAndEvents;
 
 export default function EventsScreen() {
   const [news, setNews] = useState([]);

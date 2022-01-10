@@ -18,7 +18,7 @@ export default function PresentingDetailedScreen() {
           // description: s.descriere,
           component: (
             <Flex>
-              <List spacing={6} fontSize={14} my={"5vh"}>
+              <List spacing={6} my={"5vh"}>
                 {s.materii.map((m) => {
                   return (
                     <ListItem>
