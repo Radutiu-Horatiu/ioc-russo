@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ScreenTemplate from "../../components/ScreenTemplate";
 import {
   Table,
@@ -10,6 +10,7 @@ import {
   TableCaption,
   Flex,
   Heading,
+  Text,
 } from "@chakra-ui/react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import format from "date-fns/format";
@@ -17,6 +18,8 @@ import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
 import getDay from "date-fns/getDay";
 import "react-big-calendar/lib/css/react-big-calendar.css";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { db } from "../../firebase";
 
 const locales = {
   ro: require("date-fns/locale/ro"),
@@ -54,25 +57,22 @@ const events = [
   },
 ];
 
-const news = [
-  { description: "A apărut structura anului universitar" },
-  { description: "A apărut lista cu studenții care au primit bursă" },
-  { description: "A apărut organigrama anului universitar 2021/2022" },
-  { description: "Ofertă de job" },
-  {
-    description:
-      "A apărut modalitatea de evaluare a studenților de la master anul 1",
-  },
-  {
-    description:
-      "A apărut modalitatea de evaluare a studenților de la master anul 2",
-  },
-  { description: "Internship" },
-  { description: "Internship în străinătate" },
-  { description: "Au apărut listele cu studenții pentru fiecare specializare" },
-];
-
 export default function EventsScreen() {
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const q = query(collection(db, "news"), orderBy("date", "desc"));
+      const querySnapshot = await getDocs(q);
+      let data = [];
+      querySnapshot.forEach((doc) => {
+        data.push(doc.data());
+      });
+
+      setNews(data);
+    })();
+  }, []);
+
   return (
     <ScreenTemplate
       title={"Noutăți & Evenimente"}
@@ -93,9 +93,11 @@ export default function EventsScreen() {
                       </Tr>
                     </Thead>
                     <Tbody>
-                      {news.map((obj) => (
-                        <Tr>
-                          <Td>{obj.description}</Td>
+                      {news.map((obj, i) => (
+                        <Tr key={i}>
+                          <Td>
+                            <Text>{obj.text}</Text>
+                          </Td>
                         </Tr>
                       ))}
                     </Tbody>

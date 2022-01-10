@@ -18,8 +18,6 @@ export default function Navbar() {
     history.push("/login");
   };
 
-  console.log(user);
-
   return (
     <Flex
       flexDir="column"
@@ -50,7 +48,7 @@ export default function Navbar() {
         <Button
           variant="ghost"
           justifyContent="flex-start"
-          onClick={() => history.push("/applications")}
+          onClick={() => history.push("/admittance")}
           my="0.5vh"
         >
           <Text>Admitere</Text>
@@ -111,6 +109,40 @@ export default function Navbar() {
         >
           <Text>Link-uri utile</Text>
         </Button>
+      </Flex>
+
+      {/* Down */}
+      <Flex flexDir="column">
+        {user.email ? (
+          <>
+            <Button justifyContent="flex-start" variant="ghost" mb={"1vh"}>
+              <Text>{user.email}</Text>
+            </Button>
+            <Button
+              justifyContent="flex-start"
+              variant="ghost"
+              mb={"1vh"}
+              onClick={() => history.push("/admin")}
+            >
+              <Text>Admin</Text>
+            </Button>
+            <Button
+              justifyContent="flex-start"
+              variant="ghost"
+              onClick={logUserOut}
+            >
+              <Text>Deconectare</Text>
+            </Button>
+          </>
+        ) : (
+          <Button
+            justifyContent="flex-start"
+            variant="ghost"
+            onClick={() => history.push("/login")}
+          >
+            <Text>Conectare</Text>
+          </Button>
+        )}
       </Flex>
     </Flex>
   );

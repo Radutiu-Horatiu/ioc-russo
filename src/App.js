@@ -3,19 +3,22 @@ import React from "react";
 import HomeScreen from "./screens/HomeScreen/HomeScreen";
 import TeachingStaffScreen from "./screens/TeachingStaffScreen/TeachingStaffScreen";
 import TestimonialsScreen from "./screens/TestimonialsScreen/TestimonialsScreen";
-import ApplicationsScreen from "./screens/ApplicationsScreen/ApplicationsScreen";
+import ApplicationsScreen from "./screens/AdmittanceScreen/AdmittanceScreen";
 import { Route, Switch } from "react-router";
 import LoginScreen from "./screens/Login/LoginScreen";
-import RegisterScreen from "./screens/Register/RegisterScreen";
 import Navbar from "./components/Navbar";
 import { Flex } from "@chakra-ui/layout";
 import PresentingScreen from "./screens/PresentingScreen/PresentingScreen";
 import PresentingDetailedScreen from "./screens/PresentingDetailedScreen/PresentingDetailedScreen";
 import OpportunitiesScreen from "./screens/OpportunitiesScreen/OpportunitiesScreen";
+import AdminScreen from "./screens/AdminScreen/AdminScreen";
 import EventsScreen from "./screens/EventsScreen/EventsScreen.jsx";
 import UsefulLinksScreen from "./screens/UsefulLinksScreen/UsefulLinksScreen.jsx";
+import { useSelector } from "react-redux";
 
 function App() {
+  const user = useSelector((state) => state.user);
+
   return (
     <Flex h="100vh">
       <Navbar />
@@ -48,15 +51,19 @@ function App() {
             <Route path="/opportunities">
               <OpportunitiesScreen />
             </Route>
-            <Route path="/applications">
+            <Route path="/admittance">
               <ApplicationsScreen />
             </Route>
-            <Route path="/register">
-              <RegisterScreen />
-            </Route>
-            <Route path="/login">
-              <LoginScreen />
-            </Route>
+
+            {user?.email ? (
+              <Route path="/admin">
+                <AdminScreen />
+              </Route>
+            ) : (
+              <Route path="/login">
+                <LoginScreen />
+              </Route>
+            )}
             <Route path="/">
               <HomeScreen />
             </Route>
