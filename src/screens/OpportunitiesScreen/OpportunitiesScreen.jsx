@@ -21,10 +21,6 @@ import LogoFirme13 from "../../assets/Firme/LogoFirme13.png";
 import LogoFirme14 from "../../assets/Firme/LogoFirme14.png";
 import LogoFirme15 from "../../assets/Firme/LogoFirme15.png";
 import LogoFirme16 from "../../assets/Firme/LogoFirme16.png";
-import LogoFirme17 from "../../assets/Firme/LogoFirme17.png";
-import LogoFirme18 from "../../assets/Firme/LogoFirme18.png";
-import LogoFirme19 from "../../assets/Firme/LogoFirme19.png";
-import LogoFirme20 from "../../assets/Firme/LogoFirme20.png";
 
 export default function OpportunitiesScreen() {
   const oportunities = [
@@ -61,10 +57,6 @@ export default function OpportunitiesScreen() {
     { LogoFirme14 },
     { LogoFirme15 },
     { LogoFirme16 },
-    { LogoFirme17 },
-    { LogoFirme18 },
-    { LogoFirme19 },
-    { LogoFirme20 },
   ];
   const firme = [];
   for (let index = 0; index < logos.length; index++) {
@@ -103,7 +95,7 @@ export default function OpportunitiesScreen() {
 
               {/* Carousel with sigle */}
               <Heading mb={"1vh"}>Firme partenere</Heading>
-              <MyCarousel slides={firme} />
+              <MyCarousel slides={firme}/>
             </Box>
           ),
         },
