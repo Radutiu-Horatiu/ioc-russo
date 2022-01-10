@@ -16,6 +16,7 @@ import {
   Button,
   Box,
   useDisclosure,
+  ListIcon,
 } from "@chakra-ui/react";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import format from "date-fns/format";
@@ -27,6 +28,7 @@ import React from "react";
 import ScreenTemplate from "../../components/ScreenTemplate";
 import { Link } from "react-router-dom";
 import { CheckIcon } from '@chakra-ui/icons'
+import { MdCheckCircle } from "react-icons/md";
 
 
 const locales = {
@@ -124,9 +126,9 @@ function Slider() {
       <Slide direction='bottom' in={isOpen} style={{ zIndex: 10 }}>
         <Box
           p='40px'
-          color='white'
+          color='dark-grey'
           mt='4'
-          bg='teal.500'
+          bg='#D6BCFA'
           rounded='md'
           shadow='md'
         >
@@ -139,6 +141,8 @@ function Slider() {
             </Flex>
         </Box>
       </Slide>
+      <br></br>
+      <Divider></Divider>
     </>
   )
 }
@@ -191,16 +195,18 @@ export default function ApplicationsScreen() {
             <List spacing={3}>
               {necessaryDocuments.map((obj) => (              
                 <ListItem>
-                  <CheckIcon />
+                  <ListIcon as={MdCheckCircle} color="green.500" />
                   {obj.text}
                 </ListItem>
               ))}
               <ListItem>
                 <Text>
-                <CheckIcon/>
+                <ListIcon as={MdCheckCircle} color="green.500" />
                 Certificat de competență lingvistică nivel minim B1, în termen de valabilitate, sau certificate sau atestate lingvistice acceptate conform <a href='https://psiedu.ubbcluj.ro/51-competenta-lingvistica' style={{color: "purple"}}>listei </a>.
                 </Text>
               </ListItem>
+              <br></br>
+              <Divider></Divider>
             </List>
           ),
         },
@@ -224,6 +230,8 @@ export default function ApplicationsScreen() {
                   style: { backgroundColor: "#D6BCFA" },
                 })}
               />
+              <br></br>
+              <Divider></Divider>
             </Flex>
           ),
         },

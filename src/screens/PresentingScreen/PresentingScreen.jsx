@@ -4,12 +4,14 @@ import {
   ListIcon,
   OrderedList,
   UnorderedList,
+  ListItem,
   Table,
   Thead,
   Tbody,
   Tr,
   Th,
   Td,
+  Divider,
 } from "@chakra-ui/react";
 import React from "react";
 import MyCarousel from "../../components/MyCarousel/MyCarousel";
@@ -28,50 +30,59 @@ export default function PresentingScreen() {
         {
           title: "Misiunea programului",
           description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do ",
+            "Programul abordează organizațiile ca sisteme complexe și oferă o perspectivă multinivelară asupra dinamicii și performanței organizaționale la nivel:  ",
           component: (
-            <Flex>
-              <Text>
-                Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur.
-              </Text>
+            <Flex flexDir="column">
+              <UnorderedList>
+                <ListItem>individual  (prin  cursuri  precum:  Coaching:  metode  și  tehnici,  Training  în  organizaţii, Psihologia personalului), </ListItem>
+                <ListItem>de grup (prin cursuri precum: Metode de optimizare a performanței grupurilor, Colaborare  și negociere) și  </ListItem>
+                <ListItem>organizațional  (prin  cursuri  precum:  Complexitate  și  dinamică  organizațională,  Diagnoză Organizațională,  Dezvoltare  organizațională,  Management strategic, Technology and Society) </ListItem>
+              </UnorderedList>
+              <br></br>
+              <Divider />
             </Flex>
           ),
         },
-        // {
-        //   title: "Title",
-        //   description: "Description",
-        //   component: (
-        //     <MyCarousel
-        //       slides={[
-        //         // 1
-        //         <Flex
-        //           align={"center"}
-        //           justify={"center"}
-        //           height={"300px"}
-        //           // p={"5vh"}
-        //           // bgColor={"purple.200"}
-        //         >
-        //           {/* <Image src={LOGO} h="50vh" objectFit={"cover"} /> */}
-        //           <Text>Ce face programul</Text>
-        //         </Flex>,
-        //         // 2
-        //         <Flex align={"center"} justify={"center"} height={"300px"}>
-        //           {/* <Image src={LOGO} h="50vh" objectFit={"cover"} /> */}
-        //           <Text>Principiile programului</Text>
-        //         </Flex>,
-        //         // 3
-        //         <Flex align={"center"} justify={"center"} height={"300px"}>
-        //           {/* <Image src={LOGO} h="50vh" objectFit={"cover"} /> */}
-        //           <Text>Taxe scolarizare</Text>
-        //         </Flex>,
-        //       ]}
-        //     />
-        //   ),
-        // },
+        {
+          title: "",
+          description:
+            "",
+          component: (
+            <Flex flexDir="column">
+              <Text lineHeight="7">
+              Din  punct  de  vedere  al  conținutului,  programul  masteral  oferă  o  <b>abordare interdisciplinară</b>,  reunind  arii  precum:  Resurse  Umane,  Dezvoltare  Organizațională,  Comportament  Organizațional și Sănătate  Ocupațională și  <b>abordează  modalități inovatoare de formare</b>, ce mixează documentarea științifică cu învățarea experiențială (prin participarea la  simulări  extinse  ale  interacțiunilor  intra  și  inter-organizaționale),  învățarea  prin  contactul  direct cu practicienii (experți invitați) și cercurile de cercetare colaborativă.  
+              </Text>
+              <br></br>
+              <Divider />
+            </Flex>
+          ),
+        },
+        {
+          title: "",
+          description: "",
+          component: (
+            <Flex flexDir="column">
+              <Text lineHeight="7">
+                Aliniat  cu  paradigma  “scientist-practitioner”,  programul  dezvoltă  competențe  de  cercetare și oferă masteranzilor posibilitatea <b>implicării directe în proiectele de cercetare și  dezvoltare  organizațională ale Centrului de Cercetare  în  Psihologia  Muncii  și  Organizaționale </b> – <a href="http://woprc.ro" style={{color: "purple"}}>WOPRC </a>, precum și oportunități de practică în domeniu prin parteneriate cu companii de consultanță în resurse umane și cu departamentele de resurse  umane din companii multinaționale sau naționale.  
+              </Text>
+              <br></br>
+              <Divider />
+            </Flex>
+          ),
+        },
+        {
+          title: "",
+          description: "",
+          component: (
+            <Flex flexDir="column">
+              <Text lineHeight="7">
+                În  plus,  prin  construirea  organizației  <b>Alumni</b>,  programul  masteral  urmărește  crearea  unei  comunități  de  profesioniști  (studenți,  cercetărori  și  practicieni)  care  să  faciliteze  dezvoltarea  profesională  continuă,  precum  și  identificarea  oportunităților  de  angajare  și  promovare în carieră. 
+              </Text>
+              <br></br>
+              <Divider></Divider>
+            </Flex>
+          ),
+        },
         {
           title: "Taxe scolarizare",
           description: "",
