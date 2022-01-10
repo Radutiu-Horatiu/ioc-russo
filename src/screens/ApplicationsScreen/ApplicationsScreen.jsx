@@ -67,6 +67,56 @@ const events = [
 
 function Slider() {
   const { isOpen, onToggle } = useDisclosure()
+  const information = [
+    {
+      text: "Date de contact pe perioada admiterii 2021:",
+    },
+    {
+      text: "Oficiul permanent al admiterii - 0264405337 interval 9.00-13.00",
+    },
+    {
+      text: "email: admitere.psiedu@ubbcluj.ro",
+    },
+    {
+      text: "Psihologie LR- tel.0752587616",
+    },
+    {
+      text: "Psihopedagogie Speciala, master MCA, TLA  - tel. 0752478420",
+    },
+    {
+      text: "Pedagogie, PIPP LR, Master Consiliere Scolara si Asistenta Psihopedagogica. Management Educational - tel. 0752563311",
+    },
+    {
+      text: "Linia Germana (licenta si master), Management Curicular, Designer Instructional  - tel. 0751627758",
+    },
+    {
+      text: "Psihologie LM, Psihopedagogie Speciala LM, master Consultanta si interventie Psihologica  - tel. 0750723905- tel. 0751835721",
+    },
+    {
+      text: "PIPP LM, master Metode si practici alternative in învătământul primar si prescolar LM, Strategii de învățare eficientă (Odorheiu-Secuiesc) LM",
+    },
+    {
+      text: "Mastere Psihologie - tel. 0751330993",
+    },
+    {
+      text: "Probleme legate de aplicatia de admitere online linia romana - tel.  0752618909 interval 9.00-13.00",
+    },
+    {
+      text: "Probleme legate de aplicatia de admitere online linia maghiara - tel.  0752434337 interval 9.00-13.00",
+    },
+    {
+      text: "Casierie Sindicatelor 7 - 0264405300, int.5516",
+    },
+    {
+      text: "Modul pedagogic (DPPD) tel. 0264597000",
+    },
+    {
+      text: "Casierie Sindicatelor - tel.0264405300 int.5516",
+    },
+    {
+      text: "Candidatii care au glisat de la taxa la buget pot cere returnarea taxei dupa 1 octombrie 2021.",
+    },
+  ];
 
   return (
     <>
@@ -81,54 +131,11 @@ function Slider() {
           shadow='md'
         >
             <Flex direction="column">
-              <Text>
-              Date de contact pe perioada admiterii 2021:
-              </Text>
-              <Text>
-                Oficiul permanent al admiterii - 0264405337 interval 9.00-13.00
-              </Text>
-              <Text>
-                email: admitere.psiedu@ubbcluj.ro
-              </Text>
-              <Text>
-                Psihologie LR- tel.0752587616
-              </Text>
-              <Text>
-                Psihopedagogie Speciala, master MCA, TLA  - tel. 0752478420
-              </Text>
-              <Text>
-                Pedagogie, PIPP LR, Master Consiliere Scolara si Asistenta Psihopedagogica. Management Educational - tel. 0752563311
-              </Text>
-              <Text>
-                Linia Germana (licenta si master), Management Curicular, Designer Instructional  - tel. 0751627758
-              </Text>
-              <Text>
-                Psihologie LM, Psihopedagogie Speciala LM, master Consultanta si interventie Psihologica  - tel. 0750723905- tel. 0751835721
-              </Text>
-              <Text>
-                PIPP LM, master Metode si practici alternative in învătământul primar si prescolar LM, Strategii de învățare eficientă (Odorheiu-Secuiesc) LM
-              </Text>
-              <Text>
-                Mastere Psihologie - tel. 0751330993
-              </Text>
-              <Text>
-                Probleme legate de aplicatia de admitere online linia romana - tel.  0752618909 interval 9.00-13.00
-              </Text>
-              <Text>
-                Probleme legate de aplicatia de admitere online linia maghiara - tel.  0752434337 interval 9.00-13.00
-              </Text>
-              <Text>
-                Casierie Sindicatelor 7 - 0264405300, int.5516
-              </Text>
-              <Text>
-                Modul pedagogic (DPPD) tel. 0264597000
-              </Text>
-              <Text>
-                Casierie Sindicatelor - tel.0264405300 int.5516
-              </Text>
-              <Text>
-                Candidatii care au glisat de la taxa la buget pot cere returnarea taxei dupa 1 octombrie 2021.
-              </Text>
+              {information.map((obj) => (              
+                <Text>
+                  {obj.text}
+                </Text>
+              ))}
             </Flex>
         </Box>
       </Slide>
@@ -137,6 +144,32 @@ function Slider() {
 }
 
 export default function ApplicationsScreen() {
+  const necessaryDocuments = [
+    {
+      text: "Fișa tip de înscriere, semnată (generată de platforma de admitere)",
+    },
+    {
+      text: "Diploma de bacalaureat și foaia matricolă (pentru diplomele însoțite de foaia matricolă) sau diploma echivalentă, diploma de licență și suplimentul de diplomă, sau adeverința de licență (doar pentru absolvenții promoției curente, cărora nu le-a fost încă eliberată diploma de licență până la data înscrierii). Cetățenii străini UE vor încărca originalul însoțit de traducerea legalizată după actele de studii, însoțită de echivalarea studiilor",
+    },
+    {
+      text: "Certificatul de naștere (față-verso, daca are cnp-ul pe verso)",
+    },
+    {
+      text: "Cartea de identitate Cetățenii străini UE vor încărca pașaportul, dacă e cazul și viza de ședere",
+    },
+    {
+      text: "Adeverință medicală",
+    },
+    {
+      text: "Alte documente menționate la cazurile particulare (adeverința în baza căreia se solicită scutirea de taxă, cererea de loc de rrom, loc de protecție socială, adeverințe doveditoare a aparteneței la categoria de rrom sau protecție socială, etc.)",
+    },
+    {
+      text: "Linia Germana (licenta si master), Management Curicular, Designer Instructional  - tel. 0751627758",
+    },
+    {
+      text: "Psihologie LM, Psihopedagogie Speciala LM, master Consultanta si interventie Psihologica  - tel. 0750723905- tel. 0751835721",
+    },
+  ];
   return (
     <ScreenTemplate
       title={"Admitere"}
@@ -156,35 +189,17 @@ export default function ApplicationsScreen() {
             "Actele necesare la înscriere (vor fi scanate și încărcate în format PDF) :",
           component: (
             <List spacing={3}>
-              <ListItem>
-               <CheckIcon />
-               Fișa tip de înscriere, semnată (generată de platforma de admitere)
-              </ListItem>
-              <ListItem>
-                <CheckIcon/>
-                Diploma de bacalaureat și foaia matricolă (pentru diplomele însoțite de foaia matricolă) sau diploma echivalentă, diploma de licență și suplimentul de diplomă, sau adeverința de licență (doar pentru absolvenții promoției curente, cărora nu le-a fost încă eliberată diploma de licență până la data înscrierii). Cetățenii străini UE vor încărca originalul însoțit de traducerea legalizată după actele de studii, însoțită de echivalarea studiilor
-              </ListItem>
-              <ListItem>
-                <CheckIcon/>
-                Certificatul de naștere (față-verso, daca are cnp-ul pe verso)
-              </ListItem>
-              <ListItem>
-                <CheckIcon/>
-                Cartea de identitate Cetățenii străini UE vor încărca pașaportul, dacă e cazul și viza de ședere
-              </ListItem>
-              <ListItem>
-                <CheckIcon/>
-                Adeverință medicală
-              </ListItem>
+              {necessaryDocuments.map((obj) => (              
+                <ListItem>
+                  <CheckIcon />
+                  {obj.text}
+                </ListItem>
+              ))}
               <ListItem>
                 <Text>
                 <CheckIcon/>
-                Certificat de competență lingvistică nivel minim B1, în termen de valabilitate, sau certificate sau atestate lingvistice acceptate conform <Link href='https://psiedu.ubbcluj.ro/51-competenta-lingvistica' color='teal.500'>listei</Link>.
+                Certificat de competență lingvistică nivel minim B1, în termen de valabilitate, sau certificate sau atestate lingvistice acceptate conform <a href='https://psiedu.ubbcluj.ro/51-competenta-lingvistica' style={{color: "purple"}}>listei </a>.
                 </Text>
-              </ListItem>
-              <ListItem>
-                <CheckIcon/>
-                Alte documente menționate la cazurile particulare (adeverința în baza căreia se solicită scutirea de taxă, cererea de loc de rrom, loc de protecție socială, adeverințe doveditoare a aparteneței la categoria de rrom sau protecție socială, etc.)
               </ListItem>
             </List>
           ),
@@ -206,7 +221,7 @@ export default function ApplicationsScreen() {
                   start,
                   end,
                   isSelected,
-                  style: { backgroundColor: "purple" },
+                  style: { backgroundColor: "#D6BCFA" },
                 })}
               />
             </Flex>
