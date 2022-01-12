@@ -1,3 +1,7 @@
+import {
+  Text,
+} from "@chakra-ui/react";
+
 export const myNecessaryDocuments = [
   {
     text: "Fișa tip de înscriere, semnată (generată de platforma de admitere)",
@@ -23,4 +27,18 @@ export const myNecessaryDocuments = [
   {
     text: "Psihologie LM, Psihopedagogie Speciala LM, master Consultanta si interventie Psihologica  - tel. 0750723905- tel. 0751835721",
   },
+  { text:
+      <Text style={{display: "inline"}}>
+      Certificat de competență lingvistică nivel minim B1, în termen
+      de valabilitate, sau certificate sau atestate lingvistice
+      acceptate conform{" "}
+      <a
+        href="https://psiedu.ubbcluj.ro/51-competenta-lingvistica"
+        style={{ color: "purple" }}
+      >
+        listei{" "}
+      </a>
+      .
+    </Text>
+  }
 ];

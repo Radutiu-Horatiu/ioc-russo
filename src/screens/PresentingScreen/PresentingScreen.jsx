@@ -1,9 +1,20 @@
-import { Text, Flex, UnorderedList, ListItem, Divider } from "@chakra-ui/react";
+import {
+  Text,
+  Flex,
+  UnorderedList,
+  ListItem,
+  Divider,
+} from "@chakra-ui/react";
 import React from "react";
+import MyCarousel from "../../components/MyCarousel/MyCarousel";
 import ScreenTemplate from "../../components/ScreenTemplate";
+import { Link } from "react-router-dom";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import { infos, listItems } from "../../data/informatiiPrezentareGenerala";
 
 export default function PresentingScreen() {
+  const infoItems = listItems;
+  const info = infos;
   return (
     <ScreenTemplate
       title={"Prezentare generală"}
@@ -18,21 +29,11 @@ export default function PresentingScreen() {
           component: (
             <Flex flexDir="column">
               <UnorderedList>
-                <ListItem>
-                  individual  (prin  cursuri  precum:  Coaching:  metode  și 
-                  tehnici,  Training  în  organizaţii, Psihologia
-                  personalului), 
-                </ListItem>
-                <ListItem>
-                  de grup (prin cursuri precum: Metode de optimizare a
-                  performanței grupurilor, Colaborare  și negociere) și  
-                </ListItem>
-                <ListItem>
-                  organizațional  (prin  cursuri  precum:  Complexitate  și 
-                  dinamică  organizațională,  Diagnoză Organizațională, 
-                  Dezvoltare  organizațională,  Management strategic, Technology
-                  and Society) 
-                </ListItem>
+                { infoItems.map((obj) =>  ( 
+                  <ListItem>
+                    {obj.itemText}
+                  </ListItem>
+                ))}
               </UnorderedList>
               <br></br>
               <Divider />
@@ -44,66 +45,13 @@ export default function PresentingScreen() {
           description: "",
           component: (
             <Flex flexDir="column">
-              <Text lineHeight="7">
-                Din  punct  de  vedere  al  conținutului,  programul  masteral 
-                oferă  o  <b>abordare interdisciplinară</b>,  reunind  arii 
-                precum:  Resurse  Umane,  Dezvoltare  Organizațională, 
-                Comportament  Organizațional și Sănătate  Ocupațională și {" "}
-                <b>abordează  modalități inovatoare de formare</b>, ce mixează
-                documentarea științifică cu învățarea experiențială (prin
-                participarea la  simulări  extinse  ale  interacțiunilor  intra 
-                și  inter-organizaționale),  învățarea  prin  contactul  direct
-                cu practicienii (experți invitați) și cercurile de cercetare
-                colaborativă.  
-              </Text>
-              <br></br>
-              <Divider />
-            </Flex>
-          ),
-        },
-        {
-          title: "",
-          description: "",
-          component: (
-            <Flex flexDir="column">
-              <Text lineHeight="7">
-                Aliniat  cu  paradigma  “scientist-practitioner”,  programul 
-                dezvoltă  competențe  de  cercetare și oferă masteranzilor
-                posibilitatea{" "}
-                <b>
-                  implicării directe în proiectele de cercetare și  dezvoltare 
-                  organizațională ale Centrului de Cercetare  în  Psihologia 
-                  Muncii  și  Organizaționale{" "}
-                </b>{" "}
-                –{" "}
-                <a href="http://woprc.ro" style={{ color: "purple" }}>
-                  WOPRC{" "}
-                </a>
-                , precum și oportunități de practică în domeniu prin
-                parteneriate cu companii de consultanță în resurse umane și cu
-                departamentele de resurse  umane din companii multinaționale sau
-                naționale.  
-              </Text>
-              <br></br>
-              <Divider />
-            </Flex>
-          ),
-        },
-        {
-          title: "",
-          description: "",
-          component: (
-            <Flex flexDir="column">
-              <Text lineHeight="7">
-                În  plus,  prin  construirea  organizației  <b>Alumni</b>, 
-                programul  masteral  urmărește  crearea  unei  comunități  de 
-                profesioniști  (studenți,  cercetărori  și  practicieni)  care 
-                să  faciliteze  dezvoltarea  profesională  continuă,  precum 
-                și  identificarea  oportunităților  de  angajare  și  promovare
-                în carieră. 
-              </Text>
-              <br></br>
-              <Divider></Divider>
+              { info.map((obj) =>  (
+                <Flex flexDir="column" paddingTop="10px">
+                  {obj.info}
+                  <br></br>
+                  <Divider></Divider>
+                </Flex>
+              ))}
             </Flex>
           ),
         },

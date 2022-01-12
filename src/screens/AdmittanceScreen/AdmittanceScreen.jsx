@@ -23,6 +23,8 @@ import ScreenTemplate from "../../components/ScreenTemplate";
 import { MdCheckCircle } from "react-icons/md";
 import { myEvents } from "../../data/admitereEvenimente";
 import { myNecessaryDocuments } from "../../data/admitereDocumenteNecesare";
+import { information } from "../../data/admitereInformatii";
+import { taxe } from "../../data/taxe";
 
 const locales = {
   ro: require("date-fns/locale/ro"),
@@ -40,56 +42,7 @@ const events = myEvents;
 
 function Slider() {
   const { isOpen, onToggle } = useDisclosure();
-  const information = [
-    {
-      text: "Date de contact pe perioada admiterii 2021:",
-    },
-    {
-      text: "Oficiul permanent al admiterii - 0264405337 interval 9.00-13.00",
-    },
-    {
-      text: "email: admitere.psiedu@ubbcluj.ro",
-    },
-    {
-      text: "Psihologie LR- tel.0752587616",
-    },
-    {
-      text: "Psihopedagogie Speciala, master MCA, TLA  - tel. 0752478420",
-    },
-    {
-      text: "Pedagogie, PIPP LR, Master Consiliere Scolara si Asistenta Psihopedagogica. Management Educational - tel. 0752563311",
-    },
-    {
-      text: "Linia Germana (licenta si master), Management Curicular, Designer Instructional  - tel. 0751627758",
-    },
-    {
-      text: "Psihologie LM, Psihopedagogie Speciala LM, master Consultanta si interventie Psihologica  - tel. 0750723905- tel. 0751835721",
-    },
-    {
-      text: "PIPP LM, master Metode si practici alternative in învătământul primar si prescolar LM, Strategii de învățare eficientă (Odorheiu-Secuiesc) LM",
-    },
-    {
-      text: "Mastere Psihologie - tel. 0751330993",
-    },
-    {
-      text: "Probleme legate de aplicatia de admitere online linia romana - tel.  0752618909 interval 9.00-13.00",
-    },
-    {
-      text: "Probleme legate de aplicatia de admitere online linia maghiara - tel.  0752434337 interval 9.00-13.00",
-    },
-    {
-      text: "Casierie Sindicatelor 7 - 0264405300, int.5516",
-    },
-    {
-      text: "Modul pedagogic (DPPD) tel. 0264597000",
-    },
-    {
-      text: "Casierie Sindicatelor - tel.0264405300 int.5516",
-    },
-    {
-      text: "Candidatii care au glisat de la taxa la buget pot cere returnarea taxei dupa 1 octombrie 2021.",
-    },
-  ];
+  const informations = information;
 
   return (
     <>
@@ -104,7 +57,7 @@ function Slider() {
           shadow="md"
         >
           <Flex direction="column">
-            {information.map((obj) => (
+            {informations.map((obj) => (
               <Text>{obj.text}</Text>
             ))}
           </Flex>
@@ -118,6 +71,7 @@ function Slider() {
 
 export default function ApplicationsScreen() {
   const necessaryDocuments = myNecessaryDocuments;
+  const taxes = taxe;
   return (
     <ScreenTemplate
       title={"Admitere"}
@@ -142,21 +96,6 @@ export default function ApplicationsScreen() {
                   {obj.text}
                 </ListItem>
               ))}
-              <ListItem>
-                <Text>
-                  <ListIcon as={MdCheckCircle} color="green.500" />
-                  Certificat de competență lingvistică nivel minim B1, în termen
-                  de valabilitate, sau certificate sau atestate lingvistice
-                  acceptate conform{" "}
-                  <a
-                    href="https://psiedu.ubbcluj.ro/51-competenta-lingvistica"
-                    style={{ color: "purple" }}
-                  >
-                    listei{" "}
-                  </a>
-                  .
-                </Text>
-              </ListItem>
               <br></br>
               <Divider></Divider>
             </List>
@@ -192,35 +131,9 @@ export default function ApplicationsScreen() {
           description: "Taxa de admitere este compusă din: ",
           component: (
             <Flex>
-              <Text paddingRight="10px">
-                Taxa de înscriere (200 lei) se achită pentru fiecare
-                specializare. Angajaţii şi copiii angajaţilor UBB, ai
-                Bibliotecii Centrale Universitare, Grădinii Botanice,
-                restaurantelor şi cafeteriilor Universităţii, precum şi copiii
-                personalului didactic şi didactic auxiliar în activitate sau
-                pensionari din instituţiile de învăţământ universitar şi
-                preuniversitar sunt scutiţi de plata taxei de înscriere numai
-                pentru o singură specializare. La înscriere candidatul este
-                obligat să declare dacă s-a mai înscris la o altă
-                facultate/specializare din Universitatea "Babeş–Bolyai" sau la o
-                altă instituţie de învăţământ superior.
-              </Text>
-              <Center height="200px">
-                <Divider orientation="vertical" />
-              </Center>
-              <Text paddingLeft="10px">
-                Taxa de procesare (în cuantum de 50 lei), se percepe pentru
-                aspectele organizatorice si de comunicare, inclusiv pentru
-                eventuala preînscriere, nu este supusă scutirilor, degrevărilor
-                şi nu este returnabilă. Fac excepţie candidaţii care sunt orfani
-                de ambii părinţi, provin din centrele de plasament , care sunt
-                scutiţi de la plata taxei de admitere (formată din taxa de
-                înscriere şi taxa de procesare. Taxa de admitere se achită on
-                line pentru fiecare specializare la care se înscrie candidatul
-                (Psihologie, Psihopedagogie specială, etc), dar nu se achită
-                decat o singură dată dacă în cadrul aceleiași specializări se
-                optează și pentru „cu frecvență” și pentru „la distanță”.
-              </Text>
+              {taxes.map((obj) => (
+                <Text>{obj.taxa}</Text>
+              ))}
             </Flex>
           ),
         },
